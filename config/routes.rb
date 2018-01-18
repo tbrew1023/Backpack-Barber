@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'main/tab1'
+
+  get 'main/tab2'
+
+  get 'main/tab3'
+
   get 'home/index'
 
   get 'home/about'

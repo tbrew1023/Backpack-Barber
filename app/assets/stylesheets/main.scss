@@ -1,0 +1,107 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//---------------------------------variables-----------------------------------
+
+//----------colors----------
+$ColorWhite: #FFFFFF;
+$ColorOrange: #FF7043;
+$ColorGray: #757575;
+$ColorLightGray: #EEEEEE;
+
+//---------dimensions----------
+$NavHeight: 60px;
+$TabIndicatorHeight: 2px;
+
+//----------style variables----------
+$LightShadow: 0px 5px 41px -15px rgba(0,0,0,0.35);
+
+//----------------------------------styles-------------------------------------
+
+body {
+  margin: 0px;
+  font-family: roboto, sans-serif;
+  //background-color: $ColorGray;
+}
+
+#content {
+  margin-top: 130px;
+  margin-left: 370px;
+}
+
+#content-logo {
+  position: absolute;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  background-image: url("https://studentweb.cdm.depaul.edu/~tbrew/it231/images/bb_logo2.png");
+  background-size: 200px;
+  top: 130px;
+  left: 80px;
+}
+
+#nav {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  background-color: $ColorWhite;
+  width: 100%;
+  height: $NavHeight + $TabIndicatorHeight;
+  box-shadow: $LightShadow;
+
+  a {
+    text-decoration: none;
+  }
+
+  #logo {
+    text-align: center;
+    line-height: $NavHeight;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: 30px;
+    background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/backpack_barber_v4_black.png");
+    opacity: 0.4;
+    grid-column: span 2;
+  }
+
+  #empty-space {
+    background-color: $ColorWhite;
+    grid-column: span 7;
+  }
+
+  .item {
+    font-size: 14px;
+    text-align: center;
+    line-height: $NavHeight;
+    color: $ColorGray;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $ColorLightGray;
+      border-bottom: 2px solid $ColorLightGray;
+    }
+  }
+
+  #item1 {
+    //background-color: red;
+  }
+
+  #item2 {
+    //background-color: green;
+  }
+
+  #item3 {
+    //background-color: blue;
+  }
+
+  .selected {
+    box-sizing: border-box;
+    border-bottom: 2px solid $ColorOrange;
+    color: $ColorOrange;
+
+    &:hover {
+      background-color: $ColorLightGray;
+      border-bottom: 2px solid $ColorOrange;
+    }
+  }
+}

@@ -3,15 +3,67 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 //---------------------------------variables-----------------------------------
-
-$backgroundColor: #EEEEEE;
-
-//----------------------------------mixins-------------------------------------
-
-
+/*
+$ColorWhite: #FFFFFF;
+$ColorOrange: #FFB74D;
+$ColorGray: #757575;
+$ColorLightGray: #E0E0E0;
 
 //----------------------------------styles-------------------------------------
 
 body {
-  background-color: $backgroundColor; 
+  margin: 0px;
+  font-family: roboto, sans-serif;
 }
+
+#nav {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  background-color: white;
+  width: 100%;
+  height: 65px;
+  box-shadow: 0px 5px 41px -15px rgba(0,0,0,0.35);
+
+  #logo {
+    text-align: center;
+    line-height: 60px;
+    background-size: 45px;
+    background-repeat: no-repeat;
+    background-position: 30px;
+    background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/backpack_barber_v4_black.png");
+    opacity: 0.4;
+  }
+
+  #empty-space {
+    background-color: $ColorWhite;
+    grid-column: span 8;
+  }
+
+  .item {
+    text-align: center;
+    line-height: 60px;
+    color: $ColorGray;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $ColorLightGray;
+    }
+  }
+
+  #item1 {
+    //background-color: red;
+  }
+
+  #item2 {
+    //background-color: green;
+  }
+
+  #item3 {
+    //background-color: blue;
+  }
+
+  .selected {
+    border-bottom: 3px solid $ColorOrange;
+    color: $ColorOrange;
+  }
+}*/
