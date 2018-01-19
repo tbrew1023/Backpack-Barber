@@ -1,8 +1,8 @@
 <!--navbar with tab1 selected-->
-<div id="nav">
+<nav>
   <div id="logo"></div>
   <div id="empty-space"></div>
-  <%=link_to main_tab1_path do %><div id="item1" class="item selected">Home</div><% end %>
-  <%=link_to main_tab2_path do %><div id="item2" class="item">Find Barbers</div><% end %>
-  <%=link_to main_tab3_path do %><div id="item3" class="item">Store</div><% end %>
-</div>
+  <%=link_to main_tab1_path do %><div id="item1" class="item <%= @selectedTab1 %>">Home</div><% end %>
+  <%=link_to main_tab2_path do %><div id="item2" class="item <%= @selectedTab2 %>">Find Barbers</div><% end %>
+  <%=link_to main_tab3_path do %><div id="item3" class="item <%= @selectedTab3 %>">Store</div><% end %>
+</nav>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'main#tab1'
+
   get 'main/tab1'
 
   get 'main/tab2'

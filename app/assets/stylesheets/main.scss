@@ -7,6 +7,7 @@
 //----------colors----------
 $ColorWhite: #FFFFFF;
 $ColorOrange: #FF7043;
+$ColorBlue: #90CAF9;
 $ColorGray: #757575;
 $ColorLightGray: #EEEEEE;
 
@@ -22,11 +23,18 @@ $LightShadow: 0px 5px 41px -15px rgba(0,0,0,0.35);
 body {
   margin: 0px;
   font-family: roboto, sans-serif;
-  //background-color: $ColorGray;
+
+  h1 {
+    color: $ColorGray;
+  }
+
+  p {
+    color: $ColorGray;
+  }
 }
 
 #content {
-  margin-top: 130px;
+  margin-top: 105px;
   margin-left: 370px;
 }
 
@@ -41,7 +49,7 @@ body {
   left: 80px;
 }
 
-#nav {
+nav {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   background-color: $ColorWhite;
@@ -56,17 +64,17 @@ body {
   #logo {
     text-align: center;
     line-height: $NavHeight;
-    background-size: 40px;
+    background-size: 32px;
     background-repeat: no-repeat;
     background-position: 30px;
     background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/backpack_barber_v4_black.png");
     opacity: 0.4;
-    grid-column: span 2;
+    grid-column: span 1;
   }
 
   #empty-space {
     background-color: $ColorWhite;
-    grid-column: span 7;
+    grid-column: span 8;
   }
 
   .item {
@@ -94,7 +102,7 @@ body {
     //background-color: blue;
   }
 
-  /*.selected {
+  .is-selected {
     box-sizing: border-box;
     border-bottom: 2px solid $ColorOrange;
     color: $ColorOrange;
@@ -103,5 +111,7 @@ body {
       background-color: $ColorLightGray;
       border-bottom: 2px solid $ColorOrange;
     }
-  }*/
+  }
 }
+
+//---end of navbar styles---
