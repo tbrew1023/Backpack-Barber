@@ -1,8 +1,14 @@
-<!--navbar with tab1 selected-->
-<nav>
-  <div id="logo"></div>
-  <div id="empty-space"></div>
-  <%=link_to main_tab1_path do %><div id="item1" class="item <%= @selectedTab1 %>">Home</div><% end %>
-  <%=link_to main_tab2_path do %><div id="item2" class="item <%= @selectedTab2 %>">Find Barbers</div><% end %>
-  <%=link_to main_tab3_path do %><div id="item3" class="item <%= @selectedTab3 %>">Store</div><% end %>
-</nav>
+<div id="nav-wrapper-outer">
+  <div id="nav-wrapper-inner">
+    <nav>
+      <div id="logo"></div>
+      <div id="empty-space-l"></div>
+      <div class="item-container"><%=link_to main_tab1_path do %><div id="item1" class="item <%= @selectedTab1 %>">Home</div><% end %></div>
+      <div class="item-container"><%=link_to main_tab2_path do %><div id="item2" class="item <%= @selectedTab2 %>">Find Barbers</div><% end %></div>
+      <div class="item-container"><%=link_to main_tab3_path do %><div id="item3" class="item <%= @selectedTab3 %>">Store</div><% end %></div>
+      <div id="empty-space-r"></div>
+      <div id="sign-in" class="item">Sign In</div>
+      <div id="sign-up" class="item">Sign Up</div>
+    </nav>
+  </div>
+</div>

@@ -8,6 +8,7 @@
 $ColorWhite: #FFFFFF;
 $ColorOrange: #FF8A65;
 $ColorBlue: #90CAF9;
+$ColorBlack: #212121;
 $ColorGray: #757575;
 $ColorLightGray: #EEEEEE;
 
@@ -34,7 +35,7 @@ body {
 }
 
 #content {
-  margin-top: 135px;
+  margin-top: 195px;
   margin-left: 370px;
 }
 
@@ -49,13 +50,28 @@ body {
   left: 80px;
 }
 
-nav {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
+//---navbar styles---
+
+#nav-wrapper-outer {
+  position: fixed;
   background-color: $ColorWhite;
   width: 100%;
-  height: $NavHeight + $TabIndicatorHeight;
+  top: 0;
   box-shadow: $LightShadow;
+  z-index: 1;
+}
+
+#nav-wrapper-inner {
+  background-color: $ColorWhite;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(24, 0.5fr);
+  background-color: $ColorWhite;
+  height: $NavHeight;
 
   a {
     text-decoration: none;
@@ -66,15 +82,20 @@ nav {
     line-height: $NavHeight;
     background-size: 32px;
     background-repeat: no-repeat;
-    background-position: 30px;
+    background-position: 15px;
     background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/backpack_barber_v4_black.png");
     opacity: 0.4;
     grid-column: span 1;
   }
 
-  #empty-space {
+  #empty-space-l {
     background-color: $ColorWhite;
     grid-column: span 8;
+  }
+
+  #empty-space-r {
+    background-color: $ColorWhite;
+    grid-column: span 7;
   }
 
   .item {
@@ -82,34 +103,60 @@ nav {
     text-align: center;
     line-height: $NavHeight;
     color: $ColorGray;
+    transition: 200ms;
     cursor: pointer;
+  }
 
-    &:hover {
-      background-color: $ColorLightGray;
-      border-bottom: 2px solid $ColorLightGray;
-    }
+  .item-container {
+    grid-column: span 2;
   }
 
   #item1 {
     //background-color: red;
+    &:hover {
+      color: $ColorBlack;
+      background-color: $ColorLightGray !important;
+    }
   }
 
   #item2 {
     //background-color: green;
+    &:hover {
+      color: $ColorBlack;
+      background-color: $ColorLightGray !important;
+    }
   }
 
   #item3 {
     //background-color: blue;
+    &:hover {
+      color: $ColorBlack;
+      background-color: $ColorLightGray !important;
+    }
   }
 
   .is-selected {
     box-sizing: border-box;
     border-bottom: 2px solid $ColorOrange;
-    color: $ColorOrange;
+    color: $ColorBlack;
+    height: $NavHeight;
 
     &:hover {
-      background-color: $ColorLightGray;
-      border-bottom: 2px solid $ColorOrange;
+      //background-color: $ColorWhite;
+      //border-bottom: 2px solid $ColorOrange;
+    }
+  }
+
+  #sign-in {
+    margin-right: 10px;
+    &:hover {
+      color: $ColorOrange;
+    }
+  }
+
+  #sign-up {
+    &:hover {
+      color: $ColorOrange;
     }
   }
 }
