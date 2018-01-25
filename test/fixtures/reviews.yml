@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  subject: MyString
+  body: MyString
+  rating: 1
+  customerID: one
+  barberID: one
+
+two:
+  subject: MyString
+  body: MyString
+  rating: 1
+  customerID: two
+  barberID: two

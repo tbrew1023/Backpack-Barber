@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Barber Images</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Customerid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @barber_images.each do |barber_image| %>
+      <tr>
+        <td><%= barber_image.customerID %></td>
+        <td><%= link_to 'Show', barber_image %></td>
+        <td><%= link_to 'Edit', edit_barber_image_path(barber_image) %></td>
+        <td><%= link_to 'Destroy', barber_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Barber Image', new_barber_image_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  charge: 1
+  averageRating: 1
+  description: MyString
+  barberType: false
+
+two:
+  email: MyString
+  charge: 1
+  averageRating: 1
+  description: MyString
+  barberType: false

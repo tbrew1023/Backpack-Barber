@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @account.email %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @account.password %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @account.lastName %>
+</p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @account.firstName %>
+</p>
+
+<p>
+  <strong>Phonenumber:</strong>
+  <%= @account.phoneNumber %>
+</p>
+
+<p>
+  <strong>Isbarber:</strong>
+  <%= @account.isBarber %>
+</p>
+
+<p>
+  <strong>Signupdate:</strong>
+  <%= @account.signUpDate %>
+</p>
+
+<p>
+  <strong>Userimage:</strong>
+  <%= @account.userImage %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @account.city %>
+</p>
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>

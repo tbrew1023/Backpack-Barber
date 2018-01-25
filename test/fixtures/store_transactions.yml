@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dateTime: 2018-01-24 17:27:10
+  charge: 1
+  customerID: one
+  productID: one
+
+two:
+  dateTime: 2018-01-24 17:27:10
+  charge: 1
+  customerID: two
+  productID: two

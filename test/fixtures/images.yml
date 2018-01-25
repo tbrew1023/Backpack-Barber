@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  imageGroupID: one
+  url: MyString
+  sizeX: 1
+  sizeY: 1
+
+two:
+  imageGroupID: two
+  url: MyString
+  sizeX: 1
+  sizeY: 1

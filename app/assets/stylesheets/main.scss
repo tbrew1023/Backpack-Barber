@@ -35,8 +35,8 @@ body {
 }
 
 #content {
-  margin-top: 195px;
-  margin-left: 370px;
+  margin-top: 215px;
+  margin-left: 340px;
 }
 
 #content-logo {
@@ -57,6 +57,7 @@ body {
   background-color: $ColorWhite;
   width: 100%;
   top: 0;
+  left: 0;
   box-shadow: $LightShadow;
   z-index: 1;
 }
@@ -155,6 +156,8 @@ nav {
   }
 
   #sign-up {
+    font-weight: bold;
+
     &:hover {
       color: $ColorOrange;
     }
@@ -162,3 +165,23 @@ nav {
 }
 
 //---end of navbar styles---
+
+#footer {
+  position: absolute;
+  background-color: $ColorOrange;
+  width: 100%;
+  height: 120px;
+  bottom: 0;
+  left: 0;
+  padding: 30px;
+
+  a {
+    color: $ColorWhite;
+    text-decoration: none;
+    font-size: 16px;
+
+    &:hover {
+      background-color: $ColorOrange;
+    }
+  }
+}

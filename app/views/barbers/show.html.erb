@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @barber.email %>
+</p>
+
+<p>
+  <strong>Charge:</strong>
+  <%= @barber.charge %>
+</p>
+
+<p>
+  <strong>Averagerating:</strong>
+  <%= @barber.averageRating %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @barber.description %>
+</p>
+
+<p>
+  <strong>Barbertype:</strong>
+  <%= @barber.barberType %>
+</p>
+
+<%= link_to 'Edit', edit_barber_path(@barber) %> |
+<%= link_to 'Back', barbers_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  DateTime: 2018-01-24 17:19:04
+  location: MyString
+  customerID: one
+  barberID: one
+
+two:
+  DateTime: 2018-01-24 17:19:04
+  location: MyString
+  customerID: two
+  barberID: two

@@ -1,0 +1,22 @@
+<%= form_with(model: barber_image, local: true) do |form| %>
+  <% if barber_image.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(barber_image.errors.count, "error") %> prohibited this barber_image from being saved:</h2>
+
+      <ul>
+      <% barber_image.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :customerID_id %>
+    <%= form.text_field :customerID_id, id: :barber_image_customerID_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

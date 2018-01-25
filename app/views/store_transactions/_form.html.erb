@@ -1,0 +1,37 @@
+<%= form_with(model: store_transaction, local: true) do |form| %>
+  <% if store_transaction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(store_transaction.errors.count, "error") %> prohibited this store_transaction from being saved:</h2>
+
+      <ul>
+      <% store_transaction.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :dateTime %>
+    <%= form.datetime_select :dateTime, id: :store_transaction_dateTime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :charge %>
+    <%= form.number_field :charge, id: :store_transaction_charge %>
+  </div>
+
+  <div class="field">
+    <%= form.label :customerID_id %>
+    <%= form.text_field :customerID_id, id: :store_transaction_customerID_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :productID_id %>
+    <%= form.text_field :productID_id, id: :store_transaction_productID_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Datetime:</strong>
+  <%= @store_transaction.dateTime %>
+</p>
+
+<p>
+  <strong>Charge:</strong>
+  <%= @store_transaction.charge %>
+</p>
+
+<p>
+  <strong>Customerid:</strong>
+  <%= @store_transaction.customerID %>
+</p>
+
+<p>
+  <strong>Productid:</strong>
+  <%= @store_transaction.productID %>
+</p>
+
+<%= link_to 'Edit', edit_store_transaction_path(@store_transaction) %> |
+<%= link_to 'Back', store_transactions_path %>

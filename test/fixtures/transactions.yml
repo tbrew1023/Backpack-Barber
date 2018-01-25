@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dateTime: 2018-01-24 17:18:01
+  customerID: one
+  barberID: one
+
+two:
+  dateTime: 2018-01-24 17:18:01
+  customerID: two
+  barberID: two

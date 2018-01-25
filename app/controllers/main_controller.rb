@@ -14,4 +14,12 @@ class MainController < ApplicationController
     @currentView = action_name;
     @selectedTab3 = "is-selected"
   end
+
+  def help
+    @currentView = action_name;
+  end
+
+  def privacy
+    @currentView = action_name;
+  end
 end
