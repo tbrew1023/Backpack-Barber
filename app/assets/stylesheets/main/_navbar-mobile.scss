@@ -1,0 +1,128 @@
+@import 'variables';
+
+//---navbar styles---
+
+$mobileNavHeight: $NavHeight - 10px;
+
+#nav-wrapper-outer {
+  position: fixed;
+  background-color: $ColorWhite;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: $LightShadow;
+  z-index: 1;
+}
+
+#nav-wrapper-inner {
+  background-color: $ColorWhite;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  background-color: $ColorWhite;
+  height: $mobileNavHeight;
+
+  a {
+    text-decoration: none;
+  }
+
+  #logo {
+    text-align: center;
+    line-height: $mobileNavHeight;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: 15px;
+    background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/ic_dehaze_black_24dp_2x.png");
+    opacity: 0.4;
+    margin-left: -5px;
+    grid-column: span 1;
+    height: 50px;
+    cursor: pointer;
+  }
+
+  #empty-space-l {
+    background-color: $ColorWhite;
+    grid-column: span 7;
+    visibility: hidden;
+  }
+
+  #empty-space-r {
+    background-color: $ColorWhite;
+    grid-column: span 7;
+    visibility: hidden;
+  }
+
+  .item-container {
+    grid-column: span 2;
+    visibility: hidden;
+  }
+
+  #sign-in {
+    margin-right: 10px;
+    grid-column: span 1; //span 2 on mobile
+    visibility: hidden;
+    &:hover {
+      color: $ColorOrange;
+    }
+  }
+
+  #sign-up {
+    font-weight: bold;
+    grid-column: span 1; //span 2 on mobile
+    visibility: hidden;
+    &:hover {
+      color: $ColorOrange;
+    }
+  }
+}
+
+.item-mobile {
+  padding: 30px;
+  color: $ColorGray;
+
+  &:hover {
+    background-color: $ColorLightGray;
+    color: black;
+  }
+}
+
+.is-selected {
+  color: $ColorOrange;
+  font-size: 16px;
+
+  &:hover {
+    color: $ColorOrange;
+  }
+}
+
+#drawer {
+  position: absolute;
+  visibility: visible;
+  background-color: $ColorWhite;
+  width: 180px;
+  box-shadow: $LightShadow;
+  z-index: 1;
+  margin: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition: 200ms;
+  //height calculated in js
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.drawer-open {
+  opacity: 1;
+}
+
+.drawer-closed {
+  opacity: 0;
+}
+
+//---mobile style---

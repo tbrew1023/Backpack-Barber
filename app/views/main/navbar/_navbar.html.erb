@@ -11,4 +11,11 @@
       <div id="sign-up" class="item">Sign Up</div>
     </nav>
   </div>
+  <div id="drawer" class="drawer-closed">
+    <%=link_to main_tab1_path do %><div id="item1-mobile" class="item-mobile <%= @selectedTab1 %>">Home</div><% end %>
+    <%=link_to main_tab2_path do %><div id="item2-mobile" class="item-mobile <%= @selectedTab2 %>">Find Barbers</div><% end %>
+    <%=link_to main_tab3_path do %><div id="item3-mobile" class="item-mobile <%= @selectedTab3 %>">Store</div><% end %>
+    <div id="sign-in-mobile" class="item-mobile">Sign In</div>
+    <div id="sign-up-mobile" class="item-mobile">Sign Up</div>
+  </div>
 </div>

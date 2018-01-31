@@ -1,0 +1,82 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'variables';
+
+//----------desktop styles----------
+
+@media only screen and (min-width: 768px) {
+  @import 'navbar';
+  @import 'footer';
+
+  body {
+    margin: 0px;
+    font-family: roboto, sans-serif;
+    background-color: $ColorWhite;
+    height: 100%;
+
+    h1 {
+      color: $ColorGray;
+    }
+
+    p {
+      color: $ColorGray;
+    }
+  }
+
+  #content-wrapper {
+    margin-top: 215px;
+    margin-left: 340px;
+  }
+
+  #content-logo {
+    position: absolute;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    background-image: url("https://studentweb.cdm.depaul.edu/~tbrew/it231/images/bb_logo2.png");
+    background-size: 200px;
+    top: 130px;
+    left: 80px;
+  }
+}
+
+//----------mobile styles----------
+
+@media only screen and (max-width: 768px) {
+  @import 'navbar-mobile';
+  @import 'footer-mobile';
+
+  body {
+    margin: 0px;
+    font-family: roboto, sans-serif;
+    background-color: red;
+
+    h1 {
+      color: $ColorGray;
+    }
+
+    p {
+      color: $ColorGray;
+    }
+  }
+
+  #content-wrapper {
+    margin: 20px;
+    text-align: center;
+    margin-top: 340px;
+  }
+
+  #content-logo {
+    position: absolute;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-image: url("https://studentweb.cdm.depaul.edu/~tbrew/it231/images/bb_logo2.png");
+    background-size: 200px;
+    top: 100px;
+    left: 0;
+    right: 0;
+  }
+}

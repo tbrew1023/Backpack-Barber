@@ -1,4 +1,5 @@
 class Product < ApplicationRecord
   belongs_to :productColor
   belongs_to :productSize
+  validates :productPrice, presence: true, numericality: true
 end

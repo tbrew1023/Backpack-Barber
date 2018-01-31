@@ -1,54 +1,4 @@
-// Place all the styles related to the main controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-//---------------------------------variables-----------------------------------
-
-//----------colors----------
-$ColorWhite: #FFFFFF;
-$ColorOrange: #FF8A65;
-$ColorBlue: #90CAF9;
-$ColorBlack: #212121;
-$ColorGray: #757575;
-$ColorLightGray: #EEEEEE;
-
-//---------dimensions----------
-$NavHeight: 60px;
-$TabIndicatorHeight: 2px;
-
-//----------style variables----------
-$LightShadow: 0px 5px 41px -15px rgba(0,0,0,0.35);
-
-//----------------------------------styles-------------------------------------
-
-body {
-  margin: 0px;
-  font-family: roboto, sans-serif;
-
-  h1 {
-    color: $ColorGray;
-  }
-
-  p {
-    color: $ColorGray;
-  }
-}
-
-#content {
-  margin-top: 215px;
-  margin-left: 340px;
-}
-
-#content-logo {
-  position: absolute;
-  margin: 10px;
-  width: 200px;
-  height: 200px;
-  background-image: url("https://studentweb.cdm.depaul.edu/~tbrew/it231/images/bb_logo2.png");
-  background-size: 200px;
-  top: 130px;
-  left: 80px;
-}
+@import 'variables';
 
 //---navbar styles---
 
@@ -63,15 +13,14 @@ body {
 }
 
 #nav-wrapper-inner {
-  background-color: $ColorWhite;
   padding-left: 20px;
   padding-right: 20px;
 }
 
 nav {
+  background-color: $ColorWhite;
   display: grid;
   grid-template-columns: repeat(24, 0.5fr);
-  background-color: $ColorWhite;
   height: $NavHeight;
 
   a {
@@ -81,22 +30,23 @@ nav {
   #logo {
     text-align: center;
     line-height: $NavHeight;
+    height: $NavHeight;
     background-size: 32px;
     background-repeat: no-repeat;
     background-position: 15px;
     background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/backpack_barber_v4_black.png");
     opacity: 0.4;
-    grid-column: span 1;
+    grid-column: span 2;
   }
 
   #empty-space-l {
-    background-color: $ColorWhite;
-    grid-column: span 8;
+    grid-column: span 7;
+    visibility: visible;
   }
 
   #empty-space-r {
-    background-color: $ColorWhite;
     grid-column: span 7;
+    visibility: visible;
   }
 
   .item {
@@ -104,12 +54,13 @@ nav {
     text-align: center;
     line-height: $NavHeight;
     color: $ColorGray;
-    transition: 200ms;
+    //transition: 200ms;
     cursor: pointer;
   }
 
   .item-container {
     grid-column: span 2;
+    visibility: visible;
   }
 
   #item1 {
@@ -150,6 +101,8 @@ nav {
 
   #sign-in {
     margin-right: 10px;
+    grid-column: span 1; //span 2 on mobile
+    visibility: visible;
     &:hover {
       color: $ColorOrange;
     }
@@ -157,31 +110,49 @@ nav {
 
   #sign-up {
     font-weight: bold;
-
+    grid-column: span 1; //span 2 on mobile
+    visibility: visible;
     &:hover {
       color: $ColorOrange;
     }
   }
 }
 
-//---end of navbar styles---
+#drawer {
+  visibility: hidden;
+}
 
-#footer {
-  position: absolute;
-  background-color: $ColorOrange;
-  width: 100%;
-  height: 120px;
-  bottom: 0;
-  left: 0;
-  padding: 30px;
+//---medium screen sstyles---
 
-  a {
-    color: $ColorWhite;
-    text-decoration: none;
-    font-size: 16px;
+@media only screen and (max-width: 1400px) {
+  body {
+    //background-color: red !important;
+  }
+  #empty-space-l {
+    grid-column: span 5 !important;
+  }
 
+  #empty-space-r {
+    grid-column: span 4 !important;
+  }
+  #sign-in {
+    margin-right: 0px;
+    grid-column: span 2 !important; //span 2 on mobile
     &:hover {
-      background-color: $ColorOrange;
+      color: $ColorOrange;
     }
+  }
+  #sign-up {
+    font-weight: bold;
+    grid-column: span 2 !important; //span 2 on mobile
+    &:hover {
+      color: $ColorOrange;
+    }
+  }
+  .item-container {
+    grid-column: span 3 !important;
+  }
+  #drawer {
+    visibility: hidden;
   }
 }
