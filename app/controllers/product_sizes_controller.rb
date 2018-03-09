@@ -5,6 +5,7 @@ class ProductSizesController < ApplicationController
   # GET /product_sizes.json
   def index
     @product_sizes = ProductSize.all
+    @selectedTab4 = "is-selected"
   end
 
   # GET /product_sizes/1

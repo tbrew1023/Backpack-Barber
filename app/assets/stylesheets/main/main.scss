@@ -13,8 +13,7 @@
   body {
     margin: 0px;
     font-family: roboto, sans-serif;
-    background-color: $ColorWhite;
-    height: 100%;
+    background-color: $ColorOffWhite !important;
 
     h1 {
       color: $ColorGray;
@@ -22,6 +21,58 @@
 
     p {
       color: $ColorGray;
+    }
+  }
+
+  #logo:hover {
+    cursor: auto;
+
+    #drawer {
+      visibility: hidden !important;
+    }
+  }
+
+  #search-wrapper {
+    //background-color: red;
+    height: 50px;
+
+    #search {
+      position: absolute;
+      top: 2px;
+      right: 400px;
+      opacity: 0.5 !important;
+      height: 50px;
+      width: 95px;
+      transition: 300ms;
+      background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/ic_search_black_24dp_2x.png");
+      background-repeat: no-repeat;
+      background-size: 30px !important;
+      background-position: 0px 15px !important;
+    }
+
+    #searchinput {
+      opacity: 1;
+      background-color: $ColorGrayish2;
+      //margin-right: 0px;
+      margin-top: 12px !important;
+      margin-left: 40px;
+      height: 32px;
+      width: 165px;
+      border: none;
+      padding: 0px 10px 0px 10px;
+      color: $ColorBlack;
+      border-radius: 5px;
+      transition: 500ms;
+    }
+
+    &:hover {
+      #searchinput {
+        opacity: 1 !important;
+      }
+
+      #search {
+        //width: 250px;
+      }
     }
   }
 
@@ -40,6 +91,177 @@
     top: 130px;
     left: 80px;
   }
+
+  .link-wrapper {
+    a {
+      text-decoration: none;
+    }
+  }
+
+  #reports-item-container {
+    display: grid;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 65%;
+    height: 260px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+
+    .reports-item {
+      grid-column: span 1;
+      height: 160px;
+      background-color: $ColorWhite;
+      border-radius: 10px;
+      box-shadow: $LightShadow;
+      transition: 200ms;
+      padding: 40px;
+
+      .item-icon {
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: .3;
+        transition: 200ms;
+      }
+
+      #item-icon1 {
+        background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/ic_person_black_24dp_2x.png ");
+      }
+
+      #item-icon2 {
+        background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/ic_shopping_cart_black_24dp_2x.png ");
+      }
+
+      #item-icon3 {
+        background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/ic_monetization_on_black_24dp_2x.png ");
+      }
+
+      h1 {
+        font-weight: lighter;
+        margin: 0px;
+        font-size: 20px;
+        padding: 8px 0px 30px 55px;
+        border-bottom-width: 2px;
+        border-bottom-color: $ColorGrayish;
+        border-bottom-style: solid;
+        transition: 200ms;
+      }
+
+      .item-description {
+        margin-top: 35px;
+        color: $ColorGray;
+      }
+
+      .hidden-hint {
+        position: relative;
+      }
+
+      &:hover {
+        box-shadow: $HeavyShadow;
+        //height: 180px;
+        cursor: pointer;
+
+        .item-icon {
+          opacity: .5;
+        }
+
+        h1 {
+          color: $ColorOrange;
+        }
+      }
+    }
+  } //end of items container
+
+  #back-to-reports {
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    opacity: .4;
+    background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/ic_arrow_back_black_24dp_2x.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    transition: 200ms;
+
+    p {
+      font-weight: bold;
+      transition: 200ms;
+    }
+
+    &:hover {
+      opacity: .7;
+
+      p {
+        color: $ColorOrange;
+      }
+    }
+  }
+
+  #back-label {
+    position: absolute;
+    font-size: 20px;
+    top: -11px;
+    left: 55px;
+    width: 200px;
+    color: $ColorBlack;
+  }
+
+  #ugly-ad {
+    position: absolute;
+    margin: auto;
+    top: 580px;
+    left: 40px;
+    background-color: black;
+    background-image: url("https://i2.wp.com/beachpackagingdesign.com/wp-content/uploads/2013/02/Shavine-Ad-Ebony.jpg?resize=464%2C605");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 230px;
+    height: 300px;
+
+    span {
+      position: absolute;
+      bottom: -20px;
+    }
+  }
+
+} //end of media query
+
+#results {
+  position: absolute;
+  text-align: center;
+  margin: auto;
+  top: 120px;
+  right: 0;
+  left: 0;
+  width: 500px;
+
+  h1 {
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    font-weight: lighter;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #C0C0C0;
+  }
+
+
+}
+
+//----------tablet styles----------
+
+@media only screen and (max-width: 1400px) {
+  .reports-item {
+    height: 200px !important;
+  }
 }
 
 //----------mobile styles----------
@@ -51,7 +273,6 @@
   body {
     margin: 0px;
     font-family: roboto, sans-serif;
-    background-color: red;
 
     h1 {
       color: $ColorGray;
@@ -59,6 +280,106 @@
 
     p {
       color: $ColorGray;
+    }
+  }
+
+  #reports-item-container {
+    display: grid;
+    position: absolute;
+    margin: auto;
+    top: 85px;
+    right: 0;
+    left: 0;
+    width: 65%;
+    height: 260px;
+    grid-template-columns: repeat(1, 1fr);
+
+    .reports-item {
+      grid-column: span 1;
+      height: 160px;
+      background-color: $ColorWhite;
+      border-radius: 10px;
+      box-shadow: $LightShadow;
+      transition: 200ms;
+      padding: 40px;
+      margin: 0px 0px 20px 0px;
+
+      .item-icon {
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: .3;
+        transition: 200ms;
+      }
+
+      #item-icon1 {
+        background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/ic_person_black_24dp_2x.png ");
+      }
+
+      #item-icon2 {
+        background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/ic_shopping_cart_black_24dp_2x.png ");
+      }
+
+      #item-icon3 {
+        background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/ic_monetization_on_black_24dp_2x.png ");
+      }
+
+      h1 {
+        color: $ColorOrange;
+        font-weight: lighter;
+        margin: 0px;
+        font-size: 20px;
+        padding: 8px 0px 30px 55px;
+        border-bottom-width: 2px;
+        border-bottom-color: $ColorGrayish;
+        border-bottom-style: solid;
+        transition: 200ms;
+      }
+
+      .item-description {
+        margin-top: 35px;
+        color: $ColorGray;
+      }
+
+      .hidden-hint {
+        position: relative;
+      }
+
+      &:hover {
+        box-shadow: $HeavyShadow;
+        //height: 180px;
+        cursor: pointer;
+
+        .item-icon {
+          opacity: .5;
+        }
+
+        h1 {
+          color: $ColorOrange;
+        }
+      }
+    }
+  } //end of items container
+
+  .is-selected {
+    border: none !important;
+    color: $ColorOrange !important;
+    border: none !important;
+    font-weight: bold;
+
+    &:hover {
+      color: $ColorOrange;
+    }
+  }
+
+  #logo:hover {
+    //background-color: $ColorLightGray;
+    #drawer {
+      opacity: 1;
+      visibility: visible;
+      left: -10px;
     }
   }
 
@@ -79,4 +400,47 @@
     left: 0;
     right: 0;
   }
+
+  #search-wrapper {
+    height: 50px;
+
+    #search {
+      position: absolute;
+      top: -3px;
+      right: 20px;
+      opacity: 0.5 !important;
+      height: 50px;
+      width: 60px;
+      transition: 300ms;
+      background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/ic_search_black_24dp_2x.png");
+      background-repeat: no-repeat;
+      background-size: 30px !important;
+      background-position: 25px 15px !important;
+    }
+
+    #searchinput {
+      opacity: 1;
+      background-color: $ColorGrayish2;
+      margin-left: 65px;
+      margin-top: 12px !important;
+      height: 32px;
+      width: 165px;
+      border: none;
+      padding: 0px 10px 0px 10px;
+      color: $ColorBlack;
+      border-radius: 5px;
+      transition: 500ms;
+    }
+
+    &:hover {
+      #searchinput {
+        opacity: 1 !important;
+      }
+
+      #search {
+        width: 250px;
+      }
+    }
+  }
+
 }

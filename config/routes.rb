@@ -1,4 +1,33 @@
 Rails.application.routes.draw do
+
+  get 'login', to: 'sessions#new', as: 'login'
+
+  delete 'logout', to: 'sessions#destroy', as: 'logout'
+
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
+  get 'reports/customers'
+
+  get 'reports/products'
+
+  get 'reports/store_transactions'
+
+  get 'accounts/index'
+
+  get 'product_colors/index'
+
+  get 'product_sizes/index'
+
+  get 'main/search'
+
+  post 'main/search'
+
+  resources :promotions
+  resources :sessions
   resources :store_transactions
   resources :product_sizes
   resources :product_colors
@@ -21,6 +50,8 @@ Rails.application.routes.draw do
   get 'main/tab2'
 
   get 'main/tab3'
+
+  get 'main/tab4'
 
   get 'main/help'
 

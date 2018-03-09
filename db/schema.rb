@@ -10,20 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180124232710) do
+ActiveRecord::Schema.define(version: 20180309012739) do
 
-  create_table "accounts", force: :cascade do |t|
+  create_table "Accounts", force: :cascade do |t|
     t.string "email"
     t.string "password"
     t.string "lastName"
     t.string "firstName"
     t.string "phoneNumber"
     t.boolean "isBarber"
-    t.date "signUpDate"
     t.string "userImage"
     t.string "city"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "username"
+    t.string "password_digest"
   end
 
   create_table "appointments", force: :cascade do |t|
@@ -106,9 +107,21 @@ ActiveRecord::Schema.define(version: 20180124232710) do
     t.integer "productPrice"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
     t.index ["productColor_id"], name: "index_products_on_productColor_id"
     t.index ["productSize_id"], name: "index_products_on_productSize_id"
     t.index ["productType_id"], name: "index_products_on_productType_id"
+  end
+
+  create_table "promotions", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "desturl"
+    t.string "imgpath"
+    t.date "startdate"
+    t.date "enddate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "reviews", force: :cascade do |t|

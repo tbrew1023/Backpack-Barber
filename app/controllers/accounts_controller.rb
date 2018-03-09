@@ -1,10 +1,11 @@
 class AccountsController < ApplicationController
-  before_action :set_account, only: [:show, :edit, :update, :destroy]
+  #skip_before_action :authorize, :only => [:new, :create]
 
   # GET /accounts
   # GET /accounts.json
   def index
     @accounts = Account.all
+    @selectedTab4 = "is-selected"
   end
 
   # GET /accounts/1
@@ -69,6 +70,6 @@ class AccountsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def account_params
-      params.require(:account).permit(:email, :password, :lastName, :firstName, :phoneNumber, :isBarber, :signUpDate, :userImage, :city)
+      params.require(:account).permit(:email, :password, :lastName, :firstName, :phoneNumber, :isBarber, :userImage, :city, :username, :password)
     end
 end

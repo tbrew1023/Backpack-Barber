@@ -1,0 +1,11 @@
+<div id="results">
+  <h1>Showing results for '<%= @searchinput %>'</h1>
+  <% if @results>0 %>
+    <% if @colorlist.length>0 %>
+      <p>We have several products available in the color <%= @searchinput %>!</p>
+      <%= link_to product_colors_path do %><strong>View all colors</strong><% end %>
+    <% else %>
+      <p>There were no results. Please try another color.</p>
+    <% end %>
+  <% end %>
+</div>

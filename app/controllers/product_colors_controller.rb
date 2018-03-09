@@ -5,6 +5,7 @@ class ProductColorsController < ApplicationController
   # GET /product_colors.json
   def index
     @product_colors = ProductColor.all
+    @selectedTab4 = "is-selected"
   end
 
   # GET /product_colors/1

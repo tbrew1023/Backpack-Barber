@@ -4,6 +4,10 @@
 
 $mobileNavHeight: $NavHeight - 10px;
 
+body {
+  background-color: $ColorOffWhite !important;
+}
+
 #nav-wrapper-outer {
   position: fixed;
   background-color: $ColorWhite;
@@ -21,8 +25,6 @@ $mobileNavHeight: $NavHeight - 10px;
 }
 
 nav {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
   background-color: $ColorWhite;
   height: $mobileNavHeight;
 
@@ -37,33 +39,59 @@ nav {
     background-repeat: no-repeat;
     background-position: 15px;
     background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/ic_dehaze_black_24dp_2x.png");
-    opacity: 0.4;
+    opacity: 1;
     margin-left: -5px;
-    grid-column: span 1;
     height: 50px;
     cursor: pointer;
+
+    &:hover {
+      //background-color: $ColorLightGray;
+
+      #drawer {
+        opacity: 1;
+        visibility: visible;
+        left: -10px;
+      }
+    }
+
+    #drawer {
+      opacity: 0;
+      position: absolute;
+      visibility: hidden;
+      background-color: $ColorWhite;
+      width: 180px;
+      box-shadow: $LightShadow;
+      z-index: 1;
+      margin: 30px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      transition: 200ms;
+      top: 40px;
+      left: -40px;
+      //height calculated in js
+
+      a {
+        text-decoration: none;
+      }
+    }
   }
 
   #empty-space-l {
     background-color: $ColorWhite;
-    grid-column: span 7;
     visibility: hidden;
   }
 
   #empty-space-r {
     background-color: $ColorWhite;
-    grid-column: span 7;
     visibility: hidden;
   }
 
   .item-container {
-    grid-column: span 2;
     visibility: hidden;
   }
 
   #sign-in {
     margin-right: 10px;
-    grid-column: span 1; //span 2 on mobile
     visibility: hidden;
     &:hover {
       color: $ColorOrange;
@@ -72,7 +100,6 @@ nav {
 
   #sign-up {
     font-weight: bold;
-    grid-column: span 1; //span 2 on mobile
     visibility: hidden;
     &:hover {
       color: $ColorOrange;
@@ -81,7 +108,7 @@ nav {
 }
 
 .item-mobile {
-  padding: 30px;
+  padding: 10px;
   color: $ColorGray;
 
   &:hover {
@@ -90,39 +117,5 @@ nav {
   }
 }
 
-.is-selected {
-  color: $ColorOrange;
-  font-size: 16px;
-
-  &:hover {
-    color: $ColorOrange;
-  }
-}
-
-#drawer {
-  position: absolute;
-  visibility: visible;
-  background-color: $ColorWhite;
-  width: 180px;
-  box-shadow: $LightShadow;
-  z-index: 1;
-  margin: 30px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  transition: 200ms;
-  //height calculated in js
-
-  a {
-    text-decoration: none;
-  }
-}
-
-.drawer-open {
-  opacity: 1;
-}
-
-.drawer-closed {
-  opacity: 0;
-}
 
 //---mobile style---
