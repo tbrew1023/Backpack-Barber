@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root 'main#tab1'
+
   get 'login', to: 'sessions#new', as: 'login'
 
   delete 'logout', to: 'sessions#destroy', as: 'logout'
@@ -42,8 +44,6 @@ Rails.application.routes.draw do
   resources :customers
   resources :barbers
   resources :accounts
-
-  root 'main#tab1'
 
   get 'main/tab1'
 

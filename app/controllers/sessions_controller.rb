@@ -1,11 +1,12 @@
 class SessionsController < ApplicationController
-  #skip_before_action :authorize
+  skip_before_action :authorize
 
   def new
+    @selectedSignIn = "is-selected"
   end
 
   def create
-    user = Account.find_by_email(params[:name])
+    user = Account.find_by_email(params[:email])
     if user and user.authenticate(params[:password])
       session[:user_id] = user.id
       #'login_url' is whatever url you end up using for logging in

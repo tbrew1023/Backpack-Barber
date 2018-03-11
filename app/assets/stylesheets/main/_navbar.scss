@@ -19,12 +19,24 @@
 
 nav {
   background-color: $ColorWhite;
-  display: grid;
-  grid-template-columns: repeat(24, 0.5fr);
+  //display: inline;
+  //display: grid;
+  //grid-template-columns: repeat(24, 0.5fr);
   height: $NavHeight;
 
   a {
     text-decoration: none;
+  }
+
+  ul {
+    position: absolute;
+    display: inline-flex;
+    margin: 0px;
+    padding: 0px;
+
+    li {
+      list-style: none;
+    }
   }
 
   #logo {
@@ -32,6 +44,7 @@ nav {
     line-height: $NavHeight;
     height: $NavHeight;
     width: 70px;
+    margin: 0px 15px 0px 0px;
     background-size: 32px;
     background-repeat: no-repeat;
     background-position: 20px;
@@ -51,22 +64,24 @@ nav {
   }
 
   .item {
+    display: inline;
     font-size: 14px;
     text-align: center;
     line-height: $NavHeight;
     color: $ColorGray;
+    padding: 0px 15px 0px 15px;
     //transition: 200ms;
     cursor: pointer;
-
-    &:hover {
-      color: $ColorBlack;
-      background-color: $ColorLightGray !important;
-    }
   }
 
   .item-container {
     grid-column: span 2;
     visibility: visible;
+
+    &:hover {
+      //color: $ColorBlack;
+      background-color: $ColorLightGray !important;
+    }
   }
 
   #item1 {
@@ -81,6 +96,44 @@ nav {
 
   }
 
+  #item4 {
+
+  }
+
+  .nav-divider {
+    height: 25px;
+    width: 1px;
+    margin: 17px 20px 0px 20px;
+    background-color: #BBBBBB;
+  }
+
+  input[type="submit"] {
+    background-color: $ColorWhite;
+    border: none;
+    height: 60px;
+    margin: 0px;
+    color: $ColorGray;
+    font-family: roboto, sans-serif;
+    font-size: 14px;
+    padding: 0px 15px 0px 15px;
+
+    &:hover {
+      background-color: $ColorLightGray;
+      cursor: pointer;
+    }
+  }
+
+  #signin {
+    visibility: visible !important;
+    font-weight: bold;
+    margin: 0px;
+  }
+
+  #signup {
+    font-weight: bold;
+    visibility: visible !important;
+  }
+
   .is-selected {
     box-sizing: border-box;
     border-bottom: 2px solid $ColorOrange;
@@ -93,39 +146,42 @@ nav {
     }
   }
 
-  #sign-in {
-    margin-right: 10px;
-    grid-column: span 1; //span 2 on mobile
-    visibility: visible;
-    &:hover {
-      color: $ColorBlack;
-    }
+  #right-divider {
+    position: absolute;
+    right: 220px;
   }
 
-  #sign-up {
-    color: $ColorOrange;
-    font-weight: bold;
-    grid-column: span 1; //span 2 on mobile
-    visibility: visible;
-    &:hover {
-
-    }
+  a:hover {
+    background-color: $ColorWhite;
   }
 
   #cart {
     //background-color: red;
-    opacity: .5;
+    opacity: .5 !important;
+    color: $ColorWhite !important;
+    font-size: 15px;
+    line-height: 50px;
+    margin: 0px 0px 0px 13px;
+    font-weight: bold;
+  }
+
+  #cart-wrapper {
+    color: $ColorWhite !important;
+    position: absolute;
+    opacity: .4;
+    //background-color: blue;
+    width: 60px;
+    height: 60px;
+    right: 250px;
     background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/ic_shopping_cart_black_24dp_2x.png");
     background-repeat: no-repeat;
-    background-size: 38px 38px;
-    background-position: 18px;
-    color: $ColorWhite;
-    font-size: 10px;
-    line-height: 48px;
-    padding-right: 2px;
+    background-size: 40px 40px;
+    background-position: 22px 12px;
+    padding: 0px 10px 0px 10px;
 
     &:hover {
       opacity: 1;
+      cursor: pointer;
     }
   }
 
@@ -204,27 +260,6 @@ nav {
 @media only screen and (max-width: 1400px) {
   body {
     //background-color: red !important;
-  }
-  #empty-space-l {
-    grid-column: span 3 !important;
-  }
-
-  #empty-space-r {
-    grid-column: span 7 !important;
-  }
-  #sign-in {
-    margin-right: 0px;
-    grid-column: span 2 !important; //span 2 on mobile
-    &:hover {
-      color: $ColorOrange;
-    }
-  }
-  #sign-up {
-    font-weight: bold;
-    grid-column: span 2 !important; //span 2 on mobile
-    &:hover {
-      color: $ColorOrange;
-    }
   }
   .item-container {
     grid-column: span 3 !important;

@@ -11,7 +11,7 @@
   @import 'footer';
 
   body {
-    margin: 0px;
+    margin: 0px !important;
     font-family: roboto, sans-serif;
     background-color: $ColorOffWhite !important;
 
@@ -24,6 +24,99 @@
     }
   }
 
+  #banner4 {
+    background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/dan-gold-272398-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -120px;
+    background-attachment: fixed;
+    margin-bottom: 400px;
+  }
+
+  #banner3 {
+    background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/hai-phung-247271-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-attachment: fixed;
+  }
+
+  #banner2 {
+    background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/chris-knight-475073-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -200px;
+    background-attachment: fixed;
+  }
+
+  #banner1 {
+    height: 100vh;
+    opacity: .5;
+    background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/barna-bartis-585850-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-attachment: fixed;
+  }
+
+  .banner {
+    position: relative;
+    background-color: black;
+    height: 350px;
+    width: 100%;
+    padding: 0px;
+    margin-bottom: 700px;
+    opacity: 0.5
+  }
+
+  .field {
+    input {
+      background-color: $ColorGrayish;
+      border: none;
+      padding-left: 10px;
+      height: 30px;
+      border-radius: 8px;
+      color: $ColorBlack;
+    }
+  }
+
+  .authorize-card {
+    position: absolute;
+    background-color: $ColorWhite;
+    padding: 20px 40px 20px 40px;
+    margin: auto;
+    top: 25%;
+    right: 0;
+    left: 0;
+    width: 185px;
+    border-radius: 8px;
+    box-shadow: $HeavyShadow;
+
+    h1 {
+      margin-bottom: 40px;
+    }
+
+    input[type='submit'] {
+      margin-top: 20px;
+      background-color: $ColorOrange;
+      border: none;
+      padding: 15px;
+      color: $ColorWhite;
+      border-radius: 10px;
+      width: 100%;
+
+      &:hover {
+        cursor: pointer;
+        opacity: .5;
+      }
+    }
+
+    #check {
+      display: inline;
+    }
+
+  }
+
   #logo:hover {
     cursor: auto;
 
@@ -33,29 +126,32 @@
   }
 
   #search-wrapper {
+    position: absolute;
     //background-color: red;
-    height: 50px;
+    height: 60px;
+    width: 70px;
+    right: 140px;
+    opacity: .5;
 
     #search {
       position: absolute;
-      top: 2px;
-      right: 400px;
+      top: 0px;
+      right: 150px;
       opacity: 0.5 !important;
-      height: 50px;
+      height: 60px;
       width: 95px;
       transition: 300ms;
-      background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/ic_search_black_24dp_2x.png");
-      background-repeat: no-repeat;
-      background-size: 30px !important;
-      background-position: 0px 15px !important;
+      //background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/ic_search_black_24dp_2x.png");
+      //background-repeat: no-repeat;
+      //background-size: 36px !important;
+      //background-position: 0px 13px !important;
     }
 
     #searchinput {
       opacity: 1;
       background-color: $ColorGrayish2;
       //margin-right: 0px;
-      margin-top: 12px !important;
-      margin-left: 40px;
+      margin-top: 14px !important;
       height: 32px;
       width: 165px;
       border: none;
@@ -66,30 +162,61 @@
     }
 
     &:hover {
-      #searchinput {
+      /*#searchinput {
         opacity: 1 !important;
       }
 
       #search {
-        //width: 250px;
-      }
+        width: 280px;
+      }*/
     }
   }
 
+  #search-wrapper:hover {
+    #cart-wrapper {
+      //background-color: yellow;
+      //right: 250px;
+    }
+  }
+
+  /*#signup-wrapper {
+    background-image: url("https://www.xmple.com/wallpaper/orange-blue-gradient-linear-1920x1080-c2-add8e6-fa9842-a-120-f-14.svg");
+  }*/
+
   #content-wrapper {
-    margin-top: 215px;
-    margin-left: 340px;
+    position: absolute;
+    margin: auto;
+    top: 150px;
+    left: 0;
+    right: 0;
+    height: 1000px;
+    width: 1000px;
+    background-color: black;
   }
 
   #content-logo {
+    opacity: 1;
     position: absolute;
-    margin: 10px;
-    width: 200px;
+    margin: auto;
+    width: 500px;
     height: 200px;
+    //background-color: red;
     background-image: url("https://studentweb.cdm.depaul.edu/~tbrew/it231/images/bb_logo2.png");
     background-size: 200px;
-    top: 130px;
-    left: 80px;
+    background-repeat: no-repeat;
+    padding: 55px 0px 0px 230px;
+    top: 0px;
+    right:0;
+    left: 0;
+    bottom: 0;
+
+    h1 {
+      color: black;
+    }
+
+    p {
+      color: black;
+    }
   }
 
   .link-wrapper {

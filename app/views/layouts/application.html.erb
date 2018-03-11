@@ -7,9 +7,7 @@
     <%= javascript_include_tag 'main/application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <%= render "main/navbar/navbar" %>
-      <div id="content-wrapper-outer">
-        <%= yield %>
-      </div>
+    <%= render "main/navbar/navbar" %>    
+    <%= yield %>
   </body>
 </html>

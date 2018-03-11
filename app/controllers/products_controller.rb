@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  #skip_before_action :authorize, :only => [:show]
+  skip_before_action :authorize, :only => [:show]
 
   # GET /products
   # GET /products.json

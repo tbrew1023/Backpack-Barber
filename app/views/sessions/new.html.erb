@@ -1,14 +1,16 @@
-<h1>Login</h1>
-<%= form_tag sessions_path do %>
-  <div class="field">
-    <%= label_tag :name, "Username" %>
-    <%= text_field_tag :name, params[:name] %>
-  </div>
-  <div class="field">
-    <%= label_tag :password %>
-    <%= password_field_tag :password, params[:password] %>
-  </div>
-  <div class="actions">
-    <%= submit_tag "Login" %>
-  </div>
-<% end %>
+<div class="authorize-card">
+  <h1>Login</h1>
+  <%= form_tag sessions_path do %>
+    <div class="field">
+      <!--%= label_tag :email, "Email" %-->
+      <%= text_field_tag :email, params[:email], placeholder: 'Email' %>
+    </div>
+    <div class="field">
+      <!--%= label_tag :password %-->
+      <%= password_field_tag :password, params[:password], placeholder: 'Password' %>
+    </div>
+    <div class="actions">
+      <%= submit_tag "Finish" %>
+    </div>
+  <% end %>
+</div>

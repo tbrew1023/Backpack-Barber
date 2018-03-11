@@ -1,34 +1,39 @@
 <div id="nav-wrapper-outer">
   <div id="nav-wrapper-inner">
     <nav>
-      <div id="logo" class="button_to">
-        <div id="drawer" class="<%= @isOpen %>">
-          <%=link_to main_tab1_path do %><div id="item1-mobile" class="item-mobile <%= @selectedTab1 %>">Home</div><% end %>
-          <%=link_to main_tab2_path do %><div id="item2-mobile" class="item-mobile <%= @selectedTab2 %>">Find Barbers</div><% end %>
-          <%=link_to main_tab3_path do %><div id="item3-mobile" class="item-mobile <%= @selectedTab3 %>">Store</div><% end %>
-          <%=link_to main_tab4_path do %><div id="item4-mobile" class="item-mobile <%= @selectedTab4 %>">Reports</div><% end %>
+      <ul>
+        <li>
+          <div id="logo" class="button_to">
+            <div id="drawer" class="<%= @isOpen %>">
+              <%=link_to main_tab1_path do %><div id="item1-mobile" class="item-mobile <%= @selectedTab1 %>">Home</div><% end %>
+              <%=link_to main_tab2_path do %><div id="item2-mobile" class="item-mobile <%= @selectedTab2 %>">Find Barbers</div><% end %>
+              <%=link_to main_tab3_path do %><div id="item3-mobile" class="item-mobile <%= @selectedTab3 %>">Store</div><% end %>
+              <%=link_to main_tab4_path do %><div id="item4-mobile" class="item-mobile <%= @selectedTab4 %>">Reports</div><% end %>
+            </div>
+          </div>
+        </li>
+        <li><%=link_to main_tab1_path do %><div class="item-container <%= @selectedTab1 %>"><div id="item1" class="item">Home</div></div><% end %></li>
+        <li><%=link_to main_tab2_path do %><div class="item-container <%= @selectedTab2 %>"><div id="item2" class="item">Find Barbers</div></div><% end %></li>
+        <li><%=link_to main_tab3_path do %><div class="item-container <%= @selectedTab3 %>"><div id="item3" class="item">Store</div></div><% end %></li>
+        <li><%=link_to main_tab4_path do %><div class="item-container <%= @selectedTab4 %>"><div id="item4" class="item">Reports</div></div><% end %></li>
+        <div class="nav-divider"></div>
+        <% if session[:user_id].nil? %>
+          <li><%=link_to new_account_path do %><div class="item-container <%= @selectedSignUp %>"><div id="signup" class="item">Sign Up</div></div><% end %></li>
+          <li><%=link_to login_path do %><div class="item-container <%= @selectedSignIn %>"><div id="signin" class="item">Log In</div></div><% end %></li>
+        <% else %>
+          <li><%=button_to 'Logout', logout_path, :method => :delete %></li>
+        <% end %>
+      </ul>
+
+      <div id="nav-right">
+        <div id="cart-wrapper" class="item-container <%= @selectedCart %>"><div id="cart" class="item"></div></div>
+        <div id="right-divider" class="nav-divider"></div>
+        <div id="search-wrapper">
+          <!--div id="search"-->
+            <%= form_tag :action => 'search', :controller => 'main' do %><%= text_field_tag 'searchinput', @searchinput, placeholder: 'Search for Products...' %><% end %>
+          <!--/div-->
         </div>
       </div>
-      <!--div id="empty-space-l"></div-->
-      <div class="item-container"><%=link_to main_tab1_path do %><div id="item1" class="item <%= @selectedTab1 %>">Home</div><% end %></div>
-      <div class="item-container"><%=link_to main_tab2_path do %><div id="item2" class="item <%= @selectedTab2 %>">Find Barbers</div><% end %></div>
-      <div class="item-container"><%=link_to main_tab3_path do %><div id="item3" class="item <%= @selectedTab3 %>">Store</div><% end %></div>
-      <div class="item-container"><%=link_to main_tab4_path do %><div id="item4" class="item <%= @selectedTab4 %>">Reports</div><% end %></div>
-      <div id="empty-space-r"></div>
-      <div id="search-wrapper"><div id="search"><%= form_tag :action => 'search', :controller => 'main' do %><%= text_field_tag 'searchinput', @searchinput, placeholder: 'Search for colors...' %><% end %></div></div>
-      <% if session[:user_id].nil? %>
-        <%=link_to new_account_path do %><div id="sign-up" class="item">Sign Up</div><% end %>
-        <div id="sign-in" class="item">Sign In</div>
-      <% else %>
-        Hello <%=Account.find(session[:user_id]).firstName %>!
-        <%=button_to 'Logout', logout_path, :method => :delete do %><div id="log-out" class="item">Logout</div><% end %>
-      <% end %>
-      <div id="cart" class="item">0</div>
-      <!--div id="search-dialog">
-        <div id="tri-bit"></div>
-      </div-->
-      <!--div id="sign-in" class="item">Sign In</div>
-      <div id="sign-up" class="item">Sign Up</div-->
     </nav>
   </div>
 </div>

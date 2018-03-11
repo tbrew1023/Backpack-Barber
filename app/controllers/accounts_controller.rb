@@ -1,5 +1,5 @@
 class AccountsController < ApplicationController
-  #skip_before_action :authorize, :only => [:new, :create]
+  skip_before_action :authorize, :only => [:new, :create]
 
   # GET /accounts
   # GET /accounts.json
@@ -16,6 +16,7 @@ class AccountsController < ApplicationController
   # GET /accounts/new
   def new
     @account = Account.new
+    @selectedSignUp = "is-selected";
   end
 
   # GET /accounts/1/edit
