@@ -1,6 +1,26 @@
+<!--this file doesn't work. Use index instead.-->
 <div id="content-wrapper">
-  
+  <div id="categories-wrapper">
+    <div class="cat-empty"></div>
+    <div id="cat1" class="cat cat-selected">All</div>
+    <div id="cat1" class="cat">Backpacks</div>
+    <div id="cat2" class="cat">Shirts</div>
+    <div id="cat3" class="cat">Hats</div>
+    <div id="cat4" class="cat">Other</div>
+    <div class="cat-empty"></div>
+  </div>
+
+<div id="all-products">All Products</div>
+
+  <div id="catalog-wrapper">
+    <% @store_products.each do |store_product| %>
+      <div class="product-card">
+        <div class="product-img"><%= store_product.imgurl %></div>
+        <div class="price">$<%= store_product.price %></div>
+        <div class="name"><%= store_product.description %></div>
+        <!--p><%= store_product.product_type %></p-->
+        <div class="add-btn">Add to cart</div>
+      </div>
+    <% end %>
+  </div>
 </div>
-<!--%= render 'layouts/footer' %-->
-<!--p>Current time: <%= @time %></p>
-<p>Current View: <%= @currentView%></p-->

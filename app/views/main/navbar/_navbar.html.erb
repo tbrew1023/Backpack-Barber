@@ -14,7 +14,7 @@
         </li>
         <li><%=link_to main_tab1_path do %><div class="item-container <%= @selectedTab1 %>"><div id="item1" class="item">Home</div></div><% end %></li>
         <li><%=link_to main_tab2_path do %><div class="item-container <%= @selectedTab2 %>"><div id="item2" class="item">Find Barbers</div></div><% end %></li>
-        <li><%=link_to main_tab3_path do %><div class="item-container <%= @selectedTab3 %>"><div id="item3" class="item">Store</div></div><% end %></li>
+        <li><%=link_to store_products_index_path do %><div class="item-container <%= @selectedTab3 %>"><div id="item3" class="item">Store</div></div><% end %></li>
         <li><%=link_to main_tab4_path do %><div class="item-container <%= @selectedTab4 %>"><div id="item4" class="item">Reports</div></div><% end %></li>
         <div class="nav-divider"></div>
         <% if session[:user_id].nil? %>
@@ -30,7 +30,7 @@
         <div id="right-divider" class="nav-divider"></div>
         <div id="search-wrapper">
           <!--div id="search"-->
-            <%= form_tag :action => 'search', :controller => 'main' do %><%= text_field_tag 'searchinput', @searchinput, placeholder: 'Search for Products...' %><% end %>
+            <%= form_tag :action => 'search', :controller => 'main' do %><%= text_field_tag 'searchinput', @searchinput, placeholder: 'Search...' %><% end %>
           <!--/div-->
         </div>
       </div>

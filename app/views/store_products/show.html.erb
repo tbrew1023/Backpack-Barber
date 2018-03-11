@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Imgurl:</strong>
+  <%= @store_product.imgurl %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @store_product.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @store_product.description %>
+</p>
+
+<%= link_to 'Edit', edit_store_product_path(@store_product) %> |
+<%= link_to 'Back', store_products_path %>

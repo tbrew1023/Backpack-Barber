@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   root 'main#tab1'
 
   get 'login', to: 'sessions#new', as: 'login'
@@ -24,10 +25,13 @@ Rails.application.routes.draw do
 
   get 'product_sizes/index'
 
+  get 'store_products/index'
+
   get 'main/search'
 
   post 'main/search'
 
+  resources :store_products
   resources :promotions
   resources :sessions
   resources :store_transactions
