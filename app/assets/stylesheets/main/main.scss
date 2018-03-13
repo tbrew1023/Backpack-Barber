@@ -51,8 +51,9 @@
 
   #banner1 {
     height: 100vh;
-    opacity: .5;
-    background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/barna-bartis-585850-unsplash.jpg");
+    background-color: $ColorGrayish2;
+    //opacity: .5;
+    //background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/barna-bartis-585850-unsplash.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0px 0px;
@@ -134,18 +135,18 @@
 
   .product-card {
     background-color: $ColorWhite;
-    height: 400px;
+    height: 510px;
     border-radius: 10px;
     box-shadow: $LightShadow;
 
     .product-img {
       background-color: gray;
-      height: 250px;
+      height: 350px;
       border-radius: 10px 10px 0px 0px;
       //background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/product-hat.jpeg");
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: 0px -50px;
+      background-position: center;
       //opacity: 0.8;
     }
 
@@ -164,6 +165,22 @@
       text-align: left;
       color: $ColorGray;
       padding: 0px 10px 10px 35px;
+      margin-bottom: 10px;
+    }
+
+    .add-qty {
+      color: $ColorBlack;
+      background-color: $ColorGray;
+      height: 35px;
+      width: 40px;
+      border-radius: 5px 0px 0px 5px;
+      padding: 0px 5px 0px 0px;
+      float: left;
+      margin-left: 30px;
+
+      &:hover {
+        opacity: 0.5;
+      }
     }
 
     .add-btn {
@@ -171,16 +188,176 @@
       color: $ColorWhite;
       width: 120px;
       height: 35px;
-      margin: 10px 0px 0px 25px;
+      border: none;
       line-height: 35px;
-      border-radius: 20px;
+      border-radius: 0px 5px 5px 0px;
       font-weight: bold;
+      margin-right: 85px;
 
       &:hover {
         cursor: pointer;
         opacity: 0.5;
       }
     }
+  }
+
+  #cart-page-wrapper {
+    position: absolute;
+    //background-color: yellow;
+    width: 1400px;
+    margin: auto;
+    top: 150px;
+    left: 0;
+    right: 0;
+
+    h1 {
+      color: $ColorBlack;
+      font-size: 32px;
+      font-weight: normal;
+      margin: 20px 0px 40px 35px;
+    }
+
+    h2 {
+      font-weight: lighter;
+      font-size: 16px;
+      color: $ColorGray;
+      margin-left: 35px;
+    }
+  }
+
+  #cart-left {
+    //background-color: purple;
+    width: 400px;
+    float: left;
+    margin-left: 80px;
+  }
+
+  #cart-right {
+    //background-color: green;
+    width: 400px;
+    margin-right: 80px;
+  }
+
+  .cart-item {
+    position: relative;
+    margin: auto;
+    margin-top: 30px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $ColorWhite;
+    width: 550px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: $LightShadow;
+
+    .cart-img {
+      background-color: $ColorOrange;
+      width: 100px;
+      height: 100%;
+      border-radius: 10px 0px 0px 10px;
+      float: left;
+      margin-right: 30px;
+      background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/product-backpack.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .cart-item-text {
+      //background-color: yellow;
+      font-size: 14px;
+      margin: 0px 0px 10px 0px;
+      padding-top: 25px;
+      font-weight: bold;
+    }
+
+    .cart-item-price {
+      //background-color: green;
+      font-size: 28px;
+      font-weight: normal;
+    }
+
+    .qty-text {
+      //background-color: blue;
+      width: 100px;
+      float: left;
+      margin: -18px 0px 40px 100px;
+      color: $ColorGray;
+    }
+
+    .remove-btn {
+      background-color: red;
+      float: right;
+      color: $ColorWhite;
+      padding: 4px 10px 4px 10px;
+      border-radius: 5px;
+      margin-top: -11px;
+      margin-right: 15px;
+      border: none;
+
+      &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+      }
+    }
+  }
+
+  #total-msg {
+    font-size: 36px;
+    margin: 30px 0px 40px 0px;
+  }
+
+  .cart-divider {
+    position: absolute;
+    background-color: $ColorGrayish2;
+    width: 1px;
+    height: 70%;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 100px;
+    bottom: 0;
+  }
+
+  #checkout-wrapper {
+    position: absolute;
+    //background-color: purple;
+    height: 200px;
+    width: 400px;
+    right: 120px;
+
+    .checkout-btn {
+      background-color: #81C784;
+      text-align: center;
+      width: 100px;
+      padding: 15px;
+      border-radius: 10px;
+      color: $ColorWhite;
+      border: none;
+
+      &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+      }
+    }
+
+    #total-msg {
+      //background-color: green;
+    }
+  }
+
+  #checked-out {
+    //background-color: red;
+    position: absolute;
+    height: 200px;
+    width: 400px;
+    top: 350px;
+    margin:auto;
+    left: 0;
+    right: 0;
+    text-align: center;
   }
 
   .field {
@@ -231,13 +408,15 @@
 
   }
 
-  .inner-wrapper {
-    
+  #outer-wrapper {
+    background-color: red;
 
     .footer {
       position: absolute;
       background-color: black;
       height: 400px;
+      width: 100vw;
+      bottom: 0px;
     }
   }
 
@@ -296,13 +475,6 @@
     }
   }
 
-  #search-wrapper:hover {
-    #cart-wrapper {
-      //background-color: yellow;
-      //right: 250px;
-    }
-  }
-
   /*#signup-wrapper {
     background-image: url("https://www.xmple.com/wallpaper/orange-blue-gradient-linear-1920x1080-c2-add8e6-fa9842-a-120-f-14.svg");
   }*/
@@ -314,8 +486,9 @@
     left: 0;
     right: 0;
     //height: 1000px;
-    width: 1000px;
+    width: 880px;
     //background-color: black;
+    padding-bottom: 80px;
   }
 
   #content-logo {
@@ -329,17 +502,17 @@
     background-size: 200px;
     background-repeat: no-repeat;
     padding: 55px 0px 0px 230px;
-    top: 0px;
+    top: 0;
     right:0;
     left: 0;
     bottom: 0;
 
     h1 {
-      color: black;
+      color: $ColorBlack;
     }
 
     p {
-      color: black;
+      color: $ColorBlack;
     }
   }
 

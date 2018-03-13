@@ -1,0 +1,38 @@
+<div class="content-wrapper">
+  <div id="cart-page-wrapper">
+    <h1>Cart</h1>
+    <div id="cart-left">
+      <% i = 0 %>
+      <% totqty = 0 %>
+      <% totprice = 0 %>
+      <% cartlen = session[:cart_prod].length %>
+      <% if cartlen > 0 %>
+        <% while i < cartlen %>
+          <div class="cart-item">
+            <div class="cart-img" style="background-image:url('<%= StoreProduct.find(session[:cart_prod][i]).imgurl %>')"></div>
+            <div class="cart-item-text"><%= StoreProduct.find(session[:cart_prod][i].to_i).description %></div>
+            <div class="cart-item-price">$<%= StoreProduct.find(session[:cart_prod][i]).price %></div>
+            <div class="qty-text">| Quantity: <%= session[:cart_qty][i] %></div>
+            <%= form_tag :controller => 'main', :action => 'update_cart' do %>
+              <%= hidden_field_tag 'cartid', "#{i}" %>
+              <%= submit_tag 'Remove', :class => 'remove-btn' %>
+            <% end %>
+          </div>
+          <% totprice = totprice + StoreProduct.find(session[:cart_prod][i].to_i).price %>
+          <% i = i + 1 %>
+        <% end %>
+      <% else %>
+        <h2>Cart is empty. Visit the store tab to add items.</h2>
+      <% end %>
+    </div>
+    <div class="cart-divider"></div>
+    <div id="cart-right">
+      <div id="checkout-wrapper">
+        <div id="total-msg">Total: <%= number_to_currency(totprice) %></div>
+        <%= form_tag :controller => 'main', :action => 'checkout' do %>
+          <%= submit_tag 'Checkout', :class => 'checkout-btn' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -19,14 +19,14 @@
         <div class="nav-divider"></div>
         <% if session[:user_id].nil? %>
           <li><%=link_to new_account_path do %><div class="item-container <%= @selectedSignUp %>"><div id="signup" class="item">Sign Up</div></div><% end %></li>
-          <li><%=link_to login_path do %><div class="item-container <%= @selectedSignIn %>"><div id="signin" class="item">Log In</div></div><% end %></li>
+          <li><%=link_to login_path do %><div class="item-container <%= @selectedSignIn %>"><div id="signin" class="item">Login</div></div><% end %></li>
         <% else %>
           <li><%=button_to 'Logout', logout_path, :method => :delete %></li>
         <% end %>
       </ul>
 
       <div id="nav-right">
-        <div id="cart-wrapper" class="item-container <%= @selectedCart %>"><div id="cart" class="item"></div></div>
+        <%= link_to main_cart_path do %><div id="cart-wrapper" class="item-container <%= @selectedCart %>"><div id="cart" class="item"><%= session[:cart_prod].length %></div></div><% end %>
         <div id="right-divider" class="nav-divider"></div>
         <div id="search-wrapper">
           <!--div id="search"-->

@@ -27,9 +27,21 @@ Rails.application.routes.draw do
 
   get 'store_products/index'
 
+  get 'main/update_cart'
+
+  post 'main/update_cart'
+
+  get 'main/checkout'
+
+  post 'main/checkout'
+
+  get 'main/cart'
+
   get 'main/search'
 
   post 'main/search'
+
+  post 'main/buy'
 
   resources :store_products
   resources :promotions

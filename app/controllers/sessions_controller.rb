@@ -6,6 +6,8 @@ class SessionsController < ApplicationController
   end
 
   def create
+    session[:cart_prod] = Array.new
+    session[:cart_qty] = Array.new
     user = Account.find_by_email(params[:email])
     if user and user.authenticate(params[:password])
       session[:user_id] = user.id
@@ -18,6 +20,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    session[:cart_prod] = Array.new
+    session[:cart_qty] = Array.new
     session[:user_id] = nil
     #same thing with login url again
     redirect_to login_url, :notice => "Logged out!"

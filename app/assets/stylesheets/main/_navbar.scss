@@ -160,15 +160,15 @@ nav {
     opacity: .5 !important;
     color: $ColorWhite !important;
     font-size: 15px;
-    line-height: 50px;
-    margin: 0px 0px 0px 13px;
+    line-height: 46px;
+    margin: 0px 0px 0px 12px;
     font-weight: bold;
   }
 
   #cart-wrapper {
     color: $ColorWhite !important;
     position: absolute;
-    opacity: .4;
+    opacity: 1;
     //background-color: blue;
     width: 60px;
     height: 60px;
@@ -176,8 +176,8 @@ nav {
     background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/ic_shopping_cart_black_24dp_2x.png");
     background-repeat: no-repeat;
     background-size: 40px 40px;
-    background-position: 22px 12px;
-    padding: 0px 10px 0px 10px;
+    background-position: 10px 10px;
+    margin-right: 10px;
 
     &:hover {
       opacity: 1;

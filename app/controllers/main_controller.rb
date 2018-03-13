@@ -34,9 +34,49 @@ class MainController < ApplicationController
     @results=0
     if !params[:searchinput].nil?
       @results=1
-      @searchinput=params[:searchinput]
-      @searchcriteria="%#{params[:searchinput]}%"
-      @colorlist=ProductColor.where("color like ?",@searchcriteria)
+      @searchinput = params[:searchinput]
+      @searchcriteria = "%#{params[:searchinput]}%"
+      @colorlist = ProductColor.where("color like ?", @searchcriteria)
+    end
+  end
+
+  def cart
+    @selectedCart = "is-selected"
+  end
+
+  def buy
+    @prodid = params[:prodid].to_i;
+    @qty = params[:qty].to_i;
+
+    session[:cart_prod] << @prodid
+    session[:cart_qty] << @qty
+
+    redirect_to main_cart_path
+  end
+
+  def update_cart
+    cartid = params[:cartid].to_i;
+
+    session[:cart_prod].delete_at(cartid)
+    session[:cart_qty].delete_at(cartid)
+
+    redirect_to main_cart_path
+  end
+
+  def checkout
+    @cartlen = session[:cart_prod].length
+    i = 0
+    if @cartlen > 0
+      orderid = Order.create(account_id: session[:user_id], salesdate: Date.today, salesnotes: session[:cart_prod].to_s)
+      while i < @cartlen
+        OrderItem.create(order_id: orderid.id, product_id: session[:cart_prod][i].to_i, salesprice: StoreProduct.find(session[:cart_prod][i].to_i).price, prod_qty: session[:cart_qty][i])
+        i = i + 1
+      end
+
+      session[:cart_prod] = Array.new
+      session[:cart_qty] = Array.new
+
+      redirect_to main_checkout_path
     end
   end
 end

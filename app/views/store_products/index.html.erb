@@ -1,5 +1,5 @@
-<div id="content-wrapper">
-  <div class="inner-wrapper">
+<div id="outer-wrapper">
+  <div id="content-wrapper">
     <div id="categories-wrapper">
       <div class="cat-empty"></div>
       <div id="cat1" class="cat cat-selected">All</div>
@@ -15,15 +15,19 @@
     <div id="catalog-wrapper">
       <% @store_products.each do |store_product| %>
         <div class="product-card">
-          <div class="product-img" style="background-image:url('<%= store_product.imgurl %>')"></div>
-          <div class="price">$<%= store_product.price %></div>
-          <div class="name"><%= store_product.description %></div>
-          <!--p><%= store_product.product_type %></p-->
-          <div class="add-btn">Add to cart</div>
+          <%= form_tag :controller => "main", :action => "buy" do %>
+            <div class="product-img" style="background-image:url('<%= store_product.imgurl %>')"></div>
+            <div class="price">$<%= store_product.price %></div>
+            <div class="name"><%= store_product.description %></div>
+            <!--p><%= store_product.product_type %></p-->
+            <%= hidden_field_tag 'prodid', store_product.id %>
+            <div class="add-qty"><%= select_tag 'qty', "<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>" .html_safe %></div>
+            <%= submit_tag "Add to Cart", :class => "add-btn" %>
+          <% end %>
         </div>
       <% end %>
     </div>
-
-    <div class="footer"></div>
   </div>
+
+  <!--div class="footer"></div-->
 </div>
