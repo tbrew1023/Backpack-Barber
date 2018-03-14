@@ -621,8 +621,8 @@
 
   .authorize-container {
     position: absolute;
-    background-color: $ColorOrange;
-    background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/wall.jpg");
+    background-color: $ColorDarkGray;
+    //background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/wall.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -661,8 +661,10 @@
 
     input[type='submit'] {
       margin-top: 5px;
-      background-color: rgba(0,0,0,0);
-      border: 1px solid white;
+      background-color: $ColorOrange;
+      //background-color: rgba(0,0,0,0);
+      //border: 1px solid white;
+      border: none;
       padding: 10px;
       color: $ColorWhite;
       border-radius: 5px;
@@ -671,9 +673,9 @@
 
       &:hover {
         cursor: pointer;
-        background-color: $ColorWhite;
-        color: $ColorBlack;
-
+        //background-color: $ColorWhite;
+        //color: $ColorBlack;
+        opacity: 0.5;
       }
     }
 

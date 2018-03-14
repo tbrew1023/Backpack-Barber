@@ -184,7 +184,6 @@ nav {
     //background-color: blue;
     width: 60px;
     height: 60px;
-    right: 260px;
     background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/ic_shopping_cart_white_24dp_2x.png");
     background-repeat: no-repeat;
     background-size: 36px 36px;
@@ -195,6 +194,16 @@ nav {
       opacity: 1;
       cursor: pointer;
     }
+  }
+
+  .cartOut {
+    //background-color: red;
+    right: 260px; //position of cart when user is logged out
+  }
+
+  .cartIn {
+    //background-color: blue;
+    right: 260px;
   }
 
   /*#search-wrapper {

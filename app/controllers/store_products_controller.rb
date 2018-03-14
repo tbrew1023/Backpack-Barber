@@ -1,4 +1,5 @@
 class StoreProductsController < ApplicationController
+  skip_before_action :authorize #shouldn't need to login to access store
   before_action :set_store_product, only: [:show, :edit, :update, :destroy]
 
   # GET /store_products

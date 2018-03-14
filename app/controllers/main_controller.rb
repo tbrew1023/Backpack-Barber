@@ -43,8 +43,9 @@ class MainController < ApplicationController
   def filter
     @filterinput = params[:all]
     @filtercriteria = "%#{params[:all]}%"
-    @productlist = StoreProduct.where("description like ?", @searchcriteria)
-    render store_products_index_path
+    @filtered = StoreProduct.where("description like ?", @filtercriteria)
+
+    #render store_products_index_path
   end
 
   def cart

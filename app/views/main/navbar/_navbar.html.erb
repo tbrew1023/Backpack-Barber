@@ -26,13 +26,19 @@
       </ul>
 
       <div id="nav-right">
+        <% @cartStat = "cartOut" %>
         <% if !session[:user_id].nil? %>
-          <%= link_to main_cart_path do %><div id="cart-wrapper" class="item-container <%= @selectedCart %>"><div id="cart" class="item"><%= session[:cart_prod].length %></div></div><% end %>
+          <% @cartStat = "cartIn" %>
         <% end %>
         <div id="search-wrapper">
           <div id="search"></div>
           <%= form_tag :action => 'search', :controller => 'main' do %><%= text_field_tag 'searchinput', @searchinput, placeholder: 'Search store...' %><% end %>
         </div>
+        <%= link_to main_cart_path do %>
+          <div id="cart-wrapper" class="item-container <%= @selectedCart %> <%= @cartStat %>">
+            <div id="cart" class="item"><%= session[:cart_prod].length %></div>
+          </div>
+        <% end %>
       </div>
     </nav>
   </div>
