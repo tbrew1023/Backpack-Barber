@@ -2,12 +2,13 @@
 <html>
   <head>
     <title>Backpack Barber</title>
+    <link rel="icon" href="http://studentweb.cdm.depaul.edu/~tbrew/it231/images/backpack_barber_v4_black.png" />
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'main/application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <%= render "main/navbar/navbar" %>    
+    <%= render "main/navbar/navbar" %>
     <%= yield %>
   </body>
 </html>

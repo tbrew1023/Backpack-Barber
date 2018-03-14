@@ -36,8 +36,15 @@ class MainController < ApplicationController
       @results=1
       @searchinput = params[:searchinput]
       @searchcriteria = "%#{params[:searchinput]}%"
-      @colorlist = ProductColor.where("color like ?", @searchcriteria)
+      @productlist = StoreProduct.where("description like ?", @searchcriteria)
     end
+  end
+
+  def filter
+    @filterinput = params[:all]
+    @filtercriteria = "%#{params[:all]}%"
+    @productlist = StoreProduct.where("description like ?", @searchcriteria)
+    render store_products_index_path
   end
 
   def cart

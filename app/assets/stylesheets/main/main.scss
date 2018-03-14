@@ -13,61 +13,255 @@
   body {
     margin: 0px !important;
     font-family: roboto, sans-serif;
-    background-color: $ColorOffWhite !important;
+    background-color: $ColorDarkGray !important;
 
     h1 {
-      color: $ColorGray;
+      color: $ColorWhite;
     }
 
     p {
-      color: $ColorGray;
+      color: $ColorWhite;
     }
   }
 
-  #banner4 {
-    background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/dan-gold-272398-unsplash.jpg");
-    background-size: cover;
+  #opening-logo {
+    opacity: 1;
+    position: absolute;
+    margin: auto;
+    width: 500px;
+    height: 200px;
+    //background-color: red;
+    background-image: url("https://studentweb.cdm.depaul.edu/~tbrew/it231/images/bb_logo2.png");
+    background-size: 200px;
     background-repeat: no-repeat;
-    background-position: 0px -120px;
-    background-attachment: fixed;
-    margin-bottom: 400px;
+    padding: 55px 0px 0px 230px;
+    top: 0;
+    right:0;
+    left: 0;
+    bottom: 0;
+
+    h1 {
+      font-weight: lighter;
+      font-size: 50px;
+      color: $ColorWhite;
+    }
+
+    p {
+      color: $ColorWhite;
+    }
   }
 
-  #banner3 {
-    background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/hai-phung-247271-unsplash.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 0px 0px;
-    background-attachment: fixed;
+  #home-footer {
+    background-color: $ColorBlack;
+    height: 430px;
+    color: $ColorWhite;
   }
 
-  #banner2 {
-    background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/chris-knight-475073-unsplash.jpg");
+  .banner-divider {
+    background-color: $ColorGrayish2;
+    width: 300px;
+    height: 1px;
+  }
+
+  #banner5 {
+    background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/phone-edited.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0px -200px;
     background-attachment: fixed;
+    //margin-bottom: 300px;
+    height: 500px;
+  }
+
+  #banner4 {
+    background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/img3-edited.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -300px;
+    background-attachment: fixed;
+    //margin-bottom: 300px;
+    height: 600px;
+  }
+
+  #banner3 {
+    background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/img1-edited.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -420px;
+    background-attachment: fixed;
+    padding: 5px 0px 0px 0px
+    //height: 500px;
+  }
+
+  #banner2 {
+    background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/img4-edited.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -60px;
+    background-attachment: fixed;
+    //height: 500px;
   }
 
   #banner1 {
     height: 100vh;
     background-color: $ColorGrayish2;
     //opacity: .5;
-    //background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/barna-bartis-585850-unsplash.jpg");
+    background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/img2-edited.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 0px 0px;
+    background-position: 0px -300px;
     background-attachment: fixed;
   }
 
   .banner {
+    background-position: center !important;
     position: relative;
     background-color: black;
-    height: 350px;
+    height: 620px;
     width: 100%;
     padding: 0px;
-    margin-bottom: 700px;
-    opacity: 0.5
+    //margin-bottom: 700px;
+    //opacity: 0.5;
+
+    #banner2-text {
+      //background-color: $ColorWhite;
+      //border-radius: 10px;
+      //box-shadow: $HeavyShadow;
+      width: 400px;
+      height: 400px;
+      float: right;
+      margin: 140px 200px 0px 0px;
+    }
+
+    #banner3-text {
+      //background-color: gray;
+      width: 600px;
+      height: 200px;
+      margin: 150px 0px 0px 290px;
+    }
+
+    #banner4-text {
+      //background-color: red;
+      width: 400px;
+      height: 350px;
+      float: right;
+      margin: 120px 200px 0px 0px;
+    }
+
+    .banner-text {
+      p {
+        color: $ColorWhite;
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+  }
+
+  #app-links {
+    //background-color: red;
+    width: 500px;
+    height: 75px;
+    float: left;
+    margin: 240px 0px 0px 180px;
+
+    p {
+      color: $ColorWhite;
+      font-size: 20px;
+    }
+
+    #app-link-google {
+      background-image: url("http://www.yousender.com/img/googleplay.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      //background-color: blue;
+      width: 250px;
+      height: 75px;
+      float: left;
+    }
+
+    #app-link-apple {
+      background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/download-appstore.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      border-width: 2px;
+      border-style: solid;
+      border-radius: 10px;
+      border-color: $ColorWhite;
+      //background-color: green;
+      width: 210px;
+      height: 71px;
+      margin-left: 260px;
+    }
+  }
+
+  .applink {
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+  }
+
+  .arrow-container {
+    position: absolute;
+    //background-color: black;
+    width: 200px;
+    height: 300px;
+    margin: auto;
+    top: 200px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+  .arrow {
+    opacity: 0;
+    position: relative;
+    left: 42%;
+    top: 55%;
+    transition: visibility 500ms linear;
+  }
+
+  .arrow1 {
+    animation: arrow-movement 2s ease-in-out infinite;
+  }
+  .arrow2 {
+    animation: arrow-movement 2s 1s ease-in-out infinite;
+  }
+
+  .arrow:before,
+  .arrow:after {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+  }
+
+  .arrow:before {
+    transform: rotate(45deg) translateX(-23%);
+    transform-origin: top left;
+  }
+
+  .arrow:after {
+    transform: rotate(-45deg) translateX(23%);
+    transform-origin: top right;
+  }
+
+  // Animation
+  @keyframes arrow-movement {
+    0% {
+      opacity: 0;
+      top: 45%;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 
   #categories-wrapper {
@@ -80,31 +274,38 @@
   }
 
   .cat {
-    color: $ColorGray;
+    color: $ColorWhite;
     font-size: 14px;
     text-align: center;
-    background-color: $ColorWhite;
+    //background-color: $ColorGray;
     margin-top: 40px;
     height: 60px;
     line-height: 58px;
     border-radius: 10px;
-    box-shadow: $LightShadow;
+    border-style: solid;
+    border-width: 1px;
+    //box-shadow: $LightShadow;
     transition: 200ms;
+    padding: 0px 15px 0px 15px;
 
     &:hover {
       cursor: pointer;
-      color: $ColorOrange;
-      box-shadow: $HeavyShadow;
+      background-color: $ColorWhite;
+      color: $ColorBlack;
+      border-color: $ColorWhite;
+      box-shadow: none;
     }
   }
 
   .cat-selected {
     color: $ColorWhite;
     background-color: $ColorOrange;
+    border: none;
 
     &:hover {
+      background-color: $ColorOrange;
+      opacity: 0.3;
       color: $ColorWhite;
-      opacity: 0.5;
     }
   }
 
@@ -120,7 +321,7 @@
     line-height: 120px;
     text-align: center;
     font-weight: bold;
-    color: $ColorGray;
+    color: $ColorWhite;
   }
 
   #catalog-wrapper {
@@ -134,15 +335,15 @@
   }
 
   .product-card {
-    background-color: $ColorWhite;
-    height: 510px;
+    //background-color: $ColorWhite;
+    height: 490px;
     border-radius: 10px;
-    box-shadow: $LightShadow;
+    //box-shadow: $LightShadow;
 
     .product-img {
       background-color: gray;
-      height: 350px;
-      border-radius: 10px 10px 0px 0px;
+      height: 280px;
+      border-radius: 5px 5px 5px 5px;
       //background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/product-hat.jpeg");
       background-repeat: no-repeat;
       background-size: cover;
@@ -153,18 +354,18 @@
     .price {
       font-weight: bold;
       font-size: 24px;
-      color: $ColorGray;
+      color: $ColorWhite;
       //background-color: red;
       text-align: left;
-      padding: 10px 10px 10px 35px;
+      padding: 10px 10px 10px 15px;
       margin-top: 15px;
     }
 
     .name {
       //background-color: blue;
       text-align: left;
-      color: $ColorGray;
-      padding: 0px 10px 10px 35px;
+      color: $ColorWhite;
+      padding: 0px 10px 10px 15px;
       margin-bottom: 10px;
     }
 
@@ -176,7 +377,7 @@
       border-radius: 5px 0px 0px 5px;
       padding: 0px 5px 0px 0px;
       float: left;
-      margin-left: 30px;
+      margin-left: 10px;
 
       &:hover {
         opacity: 0.5;
@@ -186,13 +387,13 @@
     .add-btn {
       background-color: $ColorOrange;
       color: $ColorWhite;
-      width: 120px;
+      width: 100px;
       height: 35px;
       border: none;
       line-height: 35px;
       border-radius: 0px 5px 5px 0px;
       font-weight: bold;
-      margin-right: 85px;
+      margin-right: 65px;
 
       &:hover {
         cursor: pointer;
@@ -204,30 +405,58 @@
   #cart-page-wrapper {
     position: absolute;
     //background-color: yellow;
-    width: 1400px;
+    width: 950px;
     margin: auto;
     top: 150px;
     left: 0;
     right: 0;
 
     h1 {
-      color: $ColorBlack;
+      color: $ColorWhite;
       font-size: 32px;
       font-weight: normal;
-      margin: 20px 0px 40px 35px;
+      margin: 20px 0px 40px 90px;
     }
 
-    h2 {
+    #empty-cart {
+      //background-color: red;
+      width: 400px;
+      height: 250px;
+      position: absolute;
+      margin: auto;
+      top: 300px;
+      right: 0;
+      bottom: 0;
+      left: 0;
       font-weight: lighter;
       font-size: 16px;
-      color: $ColorGray;
-      margin-left: 35px;
+      color: $ColorWhite;
+      //margin-left: 35px;
+      text-align: center;
+
+      #empty-img {
+        margin: auto;
+        left: 0;
+        right: 0;
+        //background-color: blue;
+        background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/emptycart.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 150px;
+        height: 150px;
+        margin-bottom: 30px;
+      }
+
+      p {
+        font-size: 18px;
+        //background-color: black;
+      }
     }
   }
 
   #cart-left {
     //background-color: purple;
-    width: 400px;
+    width: 460px;
     float: left;
     margin-left: 80px;
   }
@@ -246,11 +475,14 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: $ColorWhite;
-    width: 550px;
+    //background-color: $ColorWhite;
+    width: 460px;
     height: 100px;
     border-radius: 10px;
-    box-shadow: $LightShadow;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $ColorWhite;
+    //box-shadow: $LightShadow;
 
     .cart-img {
       background-color: $ColorOrange;
@@ -271,34 +503,37 @@
       margin: 0px 0px 10px 0px;
       padding-top: 25px;
       font-weight: bold;
+      color: $ColorWhite;
     }
 
     .cart-item-price {
       //background-color: green;
       font-size: 28px;
       font-weight: normal;
+      color: $ColorWhite;
     }
 
     .qty-text {
       //background-color: blue;
       width: 100px;
       float: left;
-      margin: -18px 0px 40px 100px;
-      color: $ColorGray;
+      margin: -18px 0px 40px 115px;
+      color: $ColorWhite;
     }
 
     .remove-btn {
-      background-color: red;
+      background-color: rgba(0,0,0,0);
       float: right;
       color: $ColorWhite;
-      padding: 4px 10px 4px 10px;
+      padding: 2px 8px 2px 8px;
       border-radius: 5px;
-      margin-top: -11px;
-      margin-right: 15px;
+      margin-top: -60px;
+      margin-right: 12px;
       border: none;
 
       &:hover {
-        opacity: 0.5;
+        background-color: $ColorWhite;
+        color: $ColorBlack;
         cursor: pointer;
       }
     }
@@ -307,17 +542,18 @@
   #total-msg {
     font-size: 36px;
     margin: 30px 0px 40px 0px;
+    color: $ColorWhite;
   }
 
   .cart-divider {
     position: absolute;
-    background-color: $ColorGrayish2;
+    background-color: $ColorWhite;
     width: 1px;
     height: 70%;
-    margin: auto;
-    top: 0;
+    margin: auto ;
+    top: 20px;
     right: 0;
-    left: 100px;
+    left: 245px;
     bottom: 0;
   }
 
@@ -325,21 +561,26 @@
     position: absolute;
     //background-color: purple;
     height: 200px;
-    width: 400px;
-    right: 120px;
+    width: 260px;
+    right: 40px;
+    //margin-right: 80px;
 
     .checkout-btn {
-      background-color: #81C784;
       text-align: center;
       width: 100px;
       padding: 15px;
       border-radius: 10px;
       color: $ColorWhite;
-      border: none;
+      border-style: solid;
+      border-width: 1px;
+      border-color: $ColorWhite;
+      transition: 100ms;
+      background-color: rgba(0,0,0,0);
 
       &:hover {
-        opacity: 0.5;
+        background-color: #81C784;
         cursor: pointer;
+        border-color: #81C784;
       }
     }
 
@@ -362,18 +603,48 @@
 
   .field {
     input {
-      background-color: $ColorGrayish;
+      opacity: 0.4;
+      background-color: $ColorBlack;
       border: none;
       padding-left: 10px;
       height: 30px;
       border-radius: 8px;
-      color: $ColorBlack;
+      color: $ColorWhite;
     }
+  }
+
+  #invalid {
+    color: $ColorRed;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .authorize-container {
+    position: absolute;
+    background-color: $ColorOrange;
+    background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/wall.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+  }
+
+  #find-barbers-container {
+    position: absolute;
+    background-color: $ColorLightGray;
+    background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/Screenshot%20from%202018-03-14%2010-26-29.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
   }
 
   .authorize-card {
     position: absolute;
-    background-color: $ColorWhite;
+    //opacity: 0.6;
+    //background-color: $ColorWhite;
     padding: 20px 40px 20px 40px;
     margin: auto;
     top: 25%;
@@ -381,24 +652,28 @@
     left: 0;
     width: 185px;
     border-radius: 8px;
-    box-shadow: $HeavyShadow;
+    //box-shadow: $HeavyShadow;
 
     h1 {
-      margin-bottom: 40px;
+      margin-bottom: 25px;
+      color: $ColorWhite;
     }
 
     input[type='submit'] {
-      margin-top: 20px;
-      background-color: $ColorOrange;
-      border: none;
-      padding: 15px;
+      margin-top: 5px;
+      background-color: rgba(0,0,0,0);
+      border: 1px solid white;
+      padding: 10px;
       color: $ColorWhite;
-      border-radius: 10px;
+      border-radius: 5px;
       width: 100%;
+      transition: 200ms;
 
       &:hover {
         cursor: pointer;
-        opacity: .5;
+        background-color: $ColorWhite;
+        color: $ColorBlack;
+
       }
     }
 
@@ -406,6 +681,10 @@
       display: inline;
     }
 
+  }
+
+  #login {
+    top: 320px;
   }
 
   #outer-wrapper {
@@ -432,46 +711,50 @@
     position: absolute;
     //background-color: red;
     height: 60px;
-    width: 70px;
-    right: 140px;
-    opacity: .5;
+    width: 230px;
+    right: 20px;
+    //opacity: .5;
 
     #search {
+      opacity: 0.5;
       position: absolute;
-      top: 0px;
-      right: 150px;
-      opacity: 0.5 !important;
-      height: 60px;
-      width: 95px;
-      transition: 300ms;
-      //background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/ic_search_black_24dp_2x.png");
-      //background-repeat: no-repeat;
-      //background-size: 36px !important;
-      //background-position: 0px 13px !important;
+      //background-color: blue;
+      height: 36px;
+      width: 36px;
+      transition: 200ms;
+      margin: 13px 0px 0px 0px;
+      background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/ic_search_white_24dp_2x.png");
+      background-repeat: no-repeat;
+      background-size: 22px !important;
+      background-position: center !important;
     }
 
     #searchinput {
       opacity: 1;
-      background-color: $ColorGrayish2;
+      //background-color: $ColorWhite;
       //margin-right: 0px;
       margin-top: 14px !important;
       height: 32px;
       width: 165px;
-      border: none;
-      padding: 0px 10px 0px 10px;
-      color: $ColorBlack;
+      border-style: solid;
+      border-color: $ColorWhite;
+      border-width: 1px;
+      padding: 0px 10px 0px 36px;
+      color: $ColorWhite;
       border-radius: 5px;
-      transition: 500ms;
+      transition: 200ms;
+      background-color: rgba(0,0,0,0);
     }
 
     &:hover {
-      /*#searchinput {
-        opacity: 1 !important;
+      #searchinput {
+        background-color: $ColorWhite;
+        color: $ColorBlack;
       }
 
       #search {
-        width: 280px;
-      }*/
+        background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/ic_search_black_24dp_2x.png");
+      }
     }
   }
 
@@ -486,7 +769,7 @@
     left: 0;
     right: 0;
     //height: 1000px;
-    width: 880px;
+    width: 700px;
     //background-color: black;
     padding-bottom: 80px;
   }
@@ -508,11 +791,11 @@
     bottom: 0;
 
     h1 {
-      color: $ColorBlack;
+      color: $ColorWhite;
     }
 
     p {
-      color: $ColorBlack;
+      color: $ColorWhite;
     }
   }
 
@@ -538,11 +821,14 @@
     .reports-item {
       grid-column: span 1;
       height: 160px;
-      background-color: $ColorWhite;
-      border-radius: 10px;
-      box-shadow: $LightShadow;
+      //background-color: $ColorWhite;
+      border-radius: 5px;
+      //box-shadow: $LightShadow;
       transition: 200ms;
       padding: 40px;
+      border-style: solid;
+      border-width: 1px;
+      border-color: white;
 
       .item-icon {
         position: absolute;
@@ -571,15 +857,16 @@
         margin: 0px;
         font-size: 20px;
         padding: 8px 0px 30px 55px;
-        border-bottom-width: 2px;
+        border-bottom-width: 1px;
         border-bottom-color: $ColorGrayish;
         border-bottom-style: solid;
         transition: 200ms;
+        color: $ColorWhite;
       }
 
       .item-description {
         margin-top: 35px;
-        color: $ColorGray;
+        color: $ColorWhite;
       }
 
       .hidden-hint {
@@ -587,7 +874,8 @@
       }
 
       &:hover {
-        box-shadow: $HeavyShadow;
+        //box-shadow: $HeavyShadow;
+        background-color: $ColorWhite;
         //height: 180px;
         cursor: pointer;
 
@@ -595,8 +883,13 @@
           opacity: .5;
         }
 
+        .item-description {
+          color: $ColorGray;
+        }
+
         h1 {
           color: $ColorOrange;
+          border-bottom-color: $ColorGrayish2;
         }
       }
     }
@@ -659,14 +952,16 @@
 
 } //end of media query
 
-#results {
+.results {
   position: absolute;
   text-align: center;
   margin: auto;
   top: 120px;
   right: 0;
   left: 0;
-  width: 500px;
+  width: 700px;
+  height: 500px;
+  //background-color: black;
 
   h1 {
     padding-bottom: 50px;
@@ -699,11 +994,11 @@
     font-family: roboto, sans-serif;
 
     h1 {
-      color: $ColorGray;
+      color: $ColorWhite;
     }
 
     p {
-      color: $ColorGray;
+      color: $ColorWhite;
     }
   }
 
@@ -787,17 +1082,6 @@
     }
   } //end of items container
 
-  .is-selected {
-    border: none !important;
-    color: $ColorOrange !important;
-    border: none !important;
-    font-weight: bold;
-
-    &:hover {
-      color: $ColorOrange;
-    }
-  }
-
   #logo:hover {
     //background-color: $ColorLightGray;
     #drawer {
@@ -844,7 +1128,7 @@
 
     #searchinput {
       opacity: 1;
-      background-color: $ColorGrayish2;
+      //background-color: $ColorGrayish2;
       margin-left: 65px;
       margin-top: 12px !important;
       height: 32px;
@@ -866,5 +1150,4 @@
       }
     }
   }
-
 }

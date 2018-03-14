@@ -10,22 +10,22 @@ body {
 
 #nav-wrapper-outer {
   position: fixed;
-  background-color: $ColorWhite;
+  //background-color: $ColorWhite;
   width: 100%;
   top: 0;
   left: 0;
-  box-shadow: $LightShadow;
+  //box-shadow: $LightShadow;
   z-index: 1;
 }
 
 #nav-wrapper-inner {
-  background-color: $ColorWhite;
+  //background-color: $ColorWhite;
   padding-left: 10px;
   padding-right: 10px;
 }
 
 nav {
-  background-color: $ColorWhite;
+  //background-color: $ColorWhite;
   height: $mobileNavHeight;
 
   a {

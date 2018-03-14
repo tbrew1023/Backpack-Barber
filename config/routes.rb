@@ -7,6 +7,10 @@ Rails.application.routes.draw do
 
   delete 'logout', to: 'sessions#destroy', as: 'logout'
 
+  get 'main/filter'
+
+  post 'main/filter'
+
   get 'sessions/new'
 
   get 'sessions/create'

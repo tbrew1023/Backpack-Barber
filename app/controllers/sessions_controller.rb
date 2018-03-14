@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
       #'login_url' is whatever url you end up using for logging in
       redirect_to root_url, notice => "Logged in!"
     else
-      flash.now.alert = "Invalid username or password"
+      @loginMsg = "* The username or password is incorrect"
       render "new"
     end
   end

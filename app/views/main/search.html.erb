@@ -1,11 +1,24 @@
-<div id="results">
-  <h1>Showing results for '<%= @searchinput %>'</h1>
-  <% if @results>0 %>
-    <% if @colorlist.length>0 %>
-      <p>We have several products available in the color <%= @searchinput %>!</p>
-      <%= link_to product_colors_path do %><strong>View all colors</strong><% end %>
-    <% else %>
-      <p>There were no results. Please try another color.</p>
+
+  <div class="results">
+    <h1>Showing results for '<%= @searchinput %>'</h1>
+    <% if @results > 0 %>
+      <% if @productlist.length > 0 %>
+        <div id="catalog-wrapper">
+          <% @productlist.each do |productlist| %>
+            <div class="product-card">
+              <%= form_tag :controller => "main", :action => "buy" do %>
+                <div class="product-img" style="background-image:url('<%= productlist.imgurl %>')"></div>
+                <div class="price">$<%= productlist.price %></div>
+                <div class="name"><%= productlist.description %></div>
+                <%= hidden_field_tag 'prodid', productlist.id %>
+                <div class="add-qty"><%= select_tag 'qty', "<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>" .html_safe %></div>
+                <%= submit_tag "Add to Cart", :class => "add-btn" %>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      <% else %>
+        <p>There were no results.</p>
+      <% end %>
     <% end %>
-  <% end %>
-</div>
+  </div>

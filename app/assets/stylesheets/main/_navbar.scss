@@ -4,21 +4,22 @@
 
 #nav-wrapper-outer {
   position: fixed;
-  background-color: $ColorWhite;
   width: 100%;
   top: 0;
   left: 0;
-  box-shadow: $LightShadow;
+  //box-shadow: $LightShadow;
   z-index: 1;
+  box-shadow: inset 0px 56px 39px -15px rgba(0,0,0,0.3);
 }
 
 #nav-wrapper-inner {
   padding-left: 20px;
   padding-right: 20px;
+  margin: 15px;
 }
 
 nav {
-  background-color: $ColorWhite;
+  //background-color: $ColorWhite;
   //display: inline;
   //display: grid;
   //grid-template-columns: repeat(24, 0.5fr);
@@ -31,7 +32,7 @@ nav {
   ul {
     position: absolute;
     display: inline-flex;
-    margin: 0px;
+    margin: 0px 0px 0px 0px;
     padding: 0px;
 
     li {
@@ -44,12 +45,12 @@ nav {
     line-height: $NavHeight;
     height: $NavHeight;
     width: 70px;
-    margin: 0px 15px 0px 0px;
+    margin: 0px 0px 0px 0px;
     background-size: 32px;
     background-repeat: no-repeat;
-    background-position: 20px;
-    background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/backpack_barber_v4_black.png");
-    opacity: 0.4;
+    background-position: 10px;
+    background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/backpack_barber_v4_white.png");
+    opacity: 0.7;
     grid-column: span 1;
   }
 
@@ -68,19 +69,24 @@ nav {
     font-size: 14px;
     text-align: center;
     line-height: $NavHeight;
-    color: $ColorGray;
+    color: $ColorWhite;
     padding: 0px 15px 0px 15px;
     //transition: 200ms;
     cursor: pointer;
+
+    span {
+      //styles for inner text of item
+      padding-bottom: 8px;
+    }
   }
 
   .item-container {
     grid-column: span 2;
     visibility: visible;
+    border-radius: 10px;
 
     &:hover {
-      //color: $ColorBlack;
-      background-color: $ColorLightGray !important;
+      background-color: rgba(0,0,0, 0.2) !important;
     }
   }
 
@@ -104,41 +110,50 @@ nav {
     height: 25px;
     width: 1px;
     margin: 17px 20px 0px 20px;
+    float: left;
     background-color: #BBBBBB;
   }
 
   input[type="submit"] {
-    background-color: $ColorWhite;
+    background-color: rgba(0,0,0,0);
     border: none;
     height: 60px;
     margin: 0px;
-    color: $ColorGray;
+    color: $ColorWhite;
     font-family: roboto, sans-serif;
     font-size: 14px;
     padding: 0px 15px 0px 15px;
+    font-weight: lighter;
+    border-radius: 10px;
 
     &:hover {
-      background-color: $ColorLightGray;
+      background-color: rgba(0,0,0,0.2);
       cursor: pointer;
     }
   }
 
   #signin {
     visibility: visible !important;
-    font-weight: bold;
+    font-weight: lighter;
     margin: 0px;
   }
 
   #signup {
-    font-weight: bold;
+    font-weight: lighter;
     visibility: visible !important;
   }
 
   .is-selected {
     box-sizing: border-box;
-    border-bottom: 2px solid $ColorOrange;
-    color: $ColorBlack;
+    //background-color: $ColorBlack;
     height: $NavHeight;
+
+    span {
+      //background-color: black;
+      border-bottom-color: $ColorOrange;
+      border-bottom-style: solid;
+      border-bottom-width: 2px;
+    }
 
     &:hover {
       //background-color: $ColorWhite;
@@ -148,7 +163,7 @@ nav {
 
   #right-divider {
     position: absolute;
-    right: 220px;
+    right: 266px;
   }
 
   a:hover {
@@ -156,27 +171,24 @@ nav {
   }
 
   #cart {
-    //background-color: red;
-    opacity: .5 !important;
-    color: $ColorWhite !important;
+    color: $ColorDarkGray !important;
     font-size: 15px;
-    line-height: 46px;
-    margin: 0px 0px 0px 12px;
+    line-height: 50px;
+    margin: 0px 0px 0px 13px;
     font-weight: bold;
   }
 
   #cart-wrapper {
-    color: $ColorWhite !important;
     position: absolute;
-    opacity: 1;
+    opacity: .7;
     //background-color: blue;
     width: 60px;
     height: 60px;
-    right: 250px;
-    background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/ic_shopping_cart_black_24dp_2x.png");
+    right: 260px;
+    background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/ic_shopping_cart_white_24dp_2x.png");
     background-repeat: no-repeat;
-    background-size: 40px 40px;
-    background-position: 10px 10px;
+    background-size: 36px 36px;
+    background-position: 13px 13px;
     margin-right: 10px;
 
     &:hover {
