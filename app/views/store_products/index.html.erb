@@ -2,11 +2,23 @@
   <div id="content-wrapper">
     <div id="categories-wrapper">
       <div class="cat-empty"></div>
-      <div id="cat1" class="cat cat-selected">All</div>
-      <div id="cat1" class="cat">Backpacks</div>
-      <div id="cat2" class="cat">Shirts</div>
+      <!-- for experimentation only -->
+      <%= link_to store_products_index_path do %><div id="cat0" class="cat cat-selected">All</div><% end %>
+      <%= form_tag :action => 'search', :controller => 'main' do %><%= hidden_field_tag 'searchinput', 'barber backpack' %>
+        <%= submit_tag "Backpacks", :class => "cat" %>
+      <% end %>
+      <%= form_tag :action => 'search', :controller => 'main' do %><%= hidden_field_tag 'searchinput', 'orange' %>
+        <%= submit_tag "Tops", :class => "cat" %>
+      <% end %>
+      <%= form_tag :action => 'search', :controller => 'main' do %><%= hidden_field_tag 'searchinput', 'cap' %>
+        <%= submit_tag "Hats", :class => "cat" %>
+      <% end %>
+      <%= form_tag :action => 'search', :controller => 'main' do %><%= hidden_field_tag 'searchinput', 'mug' %>
+        <%= submit_tag "Other", :class => "cat" %>
+      <% end %>
+      <!--div id="cat2" class="cat">Shirts</div>
       <div id="cat3" class="cat">Hats</div>
-      <div id="cat4" class="cat">Other</div>
+      <div id="cat4" class="cat">Other</div-->
       <div class="cat-empty"></div>
     </div>
 

@@ -271,6 +271,15 @@
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(9, 1fr);
+
+    a {
+      text-decoration: none;
+      height: 62px;
+
+      &:hover {
+        background-color: rgba(0,0,0,0); 
+      }
+    }
   }
 
   .cat {
@@ -284,6 +293,8 @@
     border-radius: 10px;
     border-style: solid;
     border-width: 1px;
+    border-color: $ColorWhite;
+    background-color: rgba(0,0,0,0);
     //box-shadow: $LightShadow;
     transition: 200ms;
     padding: 0px 15px 0px 15px;
@@ -828,9 +839,9 @@
       //box-shadow: $LightShadow;
       transition: 200ms;
       padding: 40px;
-      border-style: solid;
-      border-width: 1px;
-      border-color: white;
+      //border-style: solid;
+      //border-width: 1px;
+      //border-color: white;
 
       .item-icon {
         position: absolute;
@@ -838,20 +849,20 @@
         height: 36px;
         background-repeat: no-repeat;
         background-size: cover;
-        opacity: .3;
+        opacity: .7;
         transition: 200ms;
       }
 
       #item-icon1 {
-        background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/ic_person_black_24dp_2x.png ");
+        background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/ic_person_white_24dp_2x.png ");
       }
 
       #item-icon2 {
-        background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/ic_shopping_cart_black_24dp_2x.png ");
+        background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/ic_color_lens_white_24dp_2x.png");
       }
 
       #item-icon3 {
-        background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/ic_monetization_on_black_24dp_2x.png ");
+        background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/ic_accessibility_white_24dp_2x.png");
       }
 
       h1 {
@@ -860,7 +871,7 @@
         font-size: 20px;
         padding: 8px 0px 30px 55px;
         border-bottom-width: 1px;
-        border-bottom-color: $ColorGrayish;
+        border-bottom-color: $ColorOrange;
         border-bottom-style: solid;
         transition: 200ms;
         color: $ColorWhite;
@@ -877,21 +888,22 @@
 
       &:hover {
         //box-shadow: $HeavyShadow;
-        background-color: $ColorWhite;
+        background-color: rgba(0,0,0,0.2);
+        //opacity: 0.5;
         //height: 180px;
         cursor: pointer;
 
         .item-icon {
-          opacity: .5;
+          //opacity: .5;
         }
 
         .item-description {
-          color: $ColorGray;
+
         }
 
         h1 {
-          color: $ColorOrange;
-          border-bottom-color: $ColorGrayish2;
+          //color: $ColorOrange;
+          //border-bottom-color: $ColorGrayish2;
         }
       }
     }
@@ -914,6 +926,7 @@
     p {
       font-weight: bold;
       transition: 200ms;
+      color: $ColorWhite;
     }
 
     &:hover {
