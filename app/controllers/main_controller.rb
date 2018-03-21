@@ -6,6 +6,7 @@ class MainController < ApplicationController
     @currentView = action_name
     @selectedTab1 = "is-selected"
     session[:cart_prod] = []
+    session[:cart_qty] = []
   end
 
   def tab2
