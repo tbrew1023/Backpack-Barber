@@ -5,6 +5,7 @@ class MainController < ApplicationController
     @promotions = Promotion.find(6)
     @currentView = action_name
     @selectedTab1 = "is-selected"
+    session[:cart_prod] = []
   end
 
   def tab2

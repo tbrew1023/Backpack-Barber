@@ -25,6 +25,16 @@ nav {
   //grid-template-columns: repeat(24, 0.5fr);
   height: $NavHeight;
 
+  #nav-right {
+    //position: absolute;
+
+    ul {
+      position: absolute;
+      right: 330px;
+      //background-color: red;
+    }
+  }
+
   a {
     text-decoration: none;
   }
@@ -44,11 +54,11 @@ nav {
     text-align: center;
     line-height: $NavHeight;
     height: $NavHeight;
-    width: 70px;
+    width: 90px;
     margin: 0px 0px 0px 0px;
-    background-size: 32px;
+    background-size: 34px;
     background-repeat: no-repeat;
-    background-position: 10px;
+    background-position: 18px 15px;
     background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/backpack_barber_v4_white.png");
     opacity: 0.7;
     grid-column: span 1;
@@ -111,7 +121,7 @@ nav {
     width: 1px;
     margin: 17px 20px 0px 20px;
     float: left;
-    background-color: #BBBBBB;
+    background-color: $ColorWhite;
   }
 
   input[type="submit"] {
@@ -172,8 +182,8 @@ nav {
 
   #cart {
     color: $ColorDarkGray !important;
-    font-size: 15px;
-    line-height: 50px;
+    font-size: 13px;
+    line-height: 51px;
     margin: 0px 0px 0px 13px;
     font-weight: bold;
   }

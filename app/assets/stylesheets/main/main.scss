@@ -28,13 +28,13 @@
     opacity: 1;
     position: absolute;
     margin: auto;
-    width: 500px;
-    height: 200px;
+    width: 300px;
+    height: 150px;
     //background-color: red;
     background-image: url("https://studentweb.cdm.depaul.edu/~tbrew/it231/images/bb_logo2.png");
-    background-size: 200px;
+    background-size: 140px;
     background-repeat: no-repeat;
-    padding: 55px 0px 0px 230px;
+    padding: 40px 0px 0px 160px;
     top: 0;
     right:0;
     left: 0;
@@ -42,7 +42,7 @@
 
     h1 {
       font-weight: lighter;
-      font-size: 50px;
+      font-size: 36px;
       color: $ColorWhite;
     }
 
@@ -52,9 +52,22 @@
   }
 
   #home-footer {
-    background-color: $ColorBlack;
-    height: 430px;
+    //position: fixed;
+    background-color: $ColorDarkGray;
+    height: 260px;
     color: $ColorWhite;
+    //z-index: 10;
+
+    .footer-content {
+      position: absolute;
+      margin: 30px auto auto auto;
+      left: 0;
+      right: 0;
+      background-color: $ColorBlack;
+      width: 700px;
+      height: 200px;
+      //z-index: 11;
+    }
   }
 
   .banner-divider {
@@ -80,14 +93,14 @@
     background-position: 0px -300px;
     background-attachment: fixed;
     //margin-bottom: 300px;
-    height: 600px;
+    height: 700px;
   }
 
   #banner3 {
     background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/img1-edited.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 0px -420px;
+    //background-position: 0px -420px;
     background-attachment: fixed;
     padding: 5px 0px 0px 0px
     //height: 500px;
@@ -97,7 +110,7 @@
     background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/img4-edited.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 0px -60px;
+    //background-position: 0px -60px;
     background-attachment: fixed;
     //height: 500px;
   }
@@ -109,12 +122,12 @@
     background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/img2-edited.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 0px -300px;
+    background-position: 0px -250px;
     background-attachment: fixed;
   }
 
   .banner {
-    background-position: center !important;
+    background-position: center;
     position: relative;
     background-color: black;
     height: 620px;
@@ -145,13 +158,13 @@
       width: 400px;
       height: 350px;
       float: right;
-      margin: 120px 200px 0px 0px;
+      margin: 170px 200px 0px 0px;
     }
 
     .banner-text {
       p {
         color: $ColorWhite;
-        font-size: 18px;
+        font-size: 13px;
         line-height: 25px;
       }
     }
@@ -277,7 +290,7 @@
       height: 62px;
 
       &:hover {
-        background-color: rgba(0,0,0,0); 
+        background-color: rgba(0,0,0,0);
       }
     }
   }
@@ -347,14 +360,19 @@
 
   .product-card {
     //background-color: $ColorWhite;
-    height: 490px;
+    height: 440px;
     border-radius: 10px;
     //box-shadow: $LightShadow;
+
+    form {
+      //background-color: $ColorWhite;
+      border-radius: 20px;
+    }
 
     .product-img {
       background-color: gray;
       height: 280px;
-      border-radius: 5px 5px 5px 5px;
+      border-radius: 10px 10px 0px 0px;
       //background-image: url("http://studentweb.cdm.depaul.edu/~tbrew/it231/images/product-hat.jpeg");
       background-repeat: no-repeat;
       background-size: cover;
@@ -364,7 +382,7 @@
 
     .price {
       font-weight: bold;
-      font-size: 24px;
+      font-size: 20px;
       color: $ColorWhite;
       //background-color: red;
       text-align: left;
@@ -378,37 +396,38 @@
       color: $ColorWhite;
       padding: 0px 10px 10px 15px;
       margin-bottom: 10px;
+      font-size: 10px;
     }
 
     .add-qty {
       color: $ColorBlack;
       background-color: $ColorGray;
       height: 35px;
-      width: 40px;
-      border-radius: 5px 0px 0px 5px;
-      padding: 0px 5px 0px 0px;
+      width: 50px;
+      border-radius: 0px 0px 0px 10px;
+      padding: 0px 5px 0px 5px;
       float: left;
-      margin-left: 10px;
+      //margin-left: 10px;
 
       &:hover {
-        opacity: 0.5;
+        background-color: $ColorBlack;
       }
     }
 
     .add-btn {
       background-color: $ColorOrange;
       color: $ColorWhite;
-      width: 100px;
+      width: 160px;
       height: 35px;
       border: none;
       line-height: 35px;
-      border-radius: 0px 5px 5px 0px;
+      border-radius: 0px 0px 10px 0px;
       font-weight: bold;
-      margin-right: 65px;
+      //margin-right: 65px;
 
       &:hover {
         cursor: pointer;
-        opacity: 0.5;
+        background-color: $ColorDarkOrange;
       }
     }
   }
